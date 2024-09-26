@@ -2,64 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
-/* global.css or base.css */
+
 @font-face {
   font-family: 'Caros';
   src: url('/fonts/Caros.woff2') format('woff2'),
        url('/fonts/Caros.woff') format('woff');
-  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Caros';
+  font-family: 'CarosBold';
   src: url('/fonts/CarosBold.woff2') format('woff2'),
        url('/fonts/CarosBold.woff') format('woff');
-  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Caros';
+  font-family: 'CarosLight';
   src: url('/fonts/CarosLight.woff2') format('woff2'),
        url('/fonts/CarosLight.woff') format('woff');
-  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Caros';
+  font-family: 'CarosMedium';
   src: url('/fonts/CarosMedium.woff2') format('woff2'),
        url('/fonts/CarosMedium.woff') format('woff');
-  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Caros';
+  font-family: 'CarosThin';
   src: url('/fonts/CarosThin.woff2') format('woff2'),
        url('/fonts/CarosThin.woff') format('woff');
-  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Caros';
+  font-family: 'CarosHeavy';
   src: url('/fonts/CarosHeavy.woff2') format('woff2'),
-       url('/fonts/CarosHeavy.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
 }
 
-/* body {
+
+
+.font-caros{
   font-family: 'Caros', sans-serif;
-} */
+}
+
+.font-caros-bold{
+  font-family: 'CarosBold', sans-serif;
+}
+
+.font-caros-light{
+  font-family: 'CarosLight', sans-serif;
+}
+
+.font-caros-medium{
+  font-family: 'CarosMedium', sans-serif;
+}
+
+.font-caros-thin{
+  font-family: 'CarosThin', sans-serif;
+}
+
+.font-caros-heavy{
+  font-family: 'CarosHeavy', sans-serif;
+}
+
+
+
+
+.section {
+  max-width: 1400px;
+  margin: 0px 12px;
+}
+
+@media (min-width: 768px) { /* md */
+  .section {
+    margin: 0px 16px;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .section {
+    margin: 0px 20px;
+  }
+}
+
+@media (min-width: 1280px) { /* xl */
+  .section {
+    margin: 0px 30px;
+  }
+}
+
 
 @layer utilities {
   .text-balance {
@@ -71,7 +111,7 @@
   :root {
     --background: 0 0% 95%; /* Light background */
     --foreground: 0 0% 5.1%; /* Dark foreground */
-    --card: 0 0% 95%; /* White card */
+    --card: 0 0% 88%; /* White card */
     --card-foreground: 0 0% 5.1%; /* Dark text on card */
     --popover: 0 0% 95%; /* White popover */
     --popover-foreground: 0 0% 5.1%; /* Dark text on popover */
@@ -98,7 +138,7 @@
   .dark {
     --background: 0 0% 5.1%; /* Dark background */
     --foreground: 0 0% 95%; /* Light foreground */
-    --card: 0 0% 5.1%; /* Dark card */
+    --card: 0 0% 10%; /* Dark card */
     --card-foreground: 0 0% 95%; /* Light text on card */
     --popover: 0 0% 5.1%; /* Dark popover */
     --popover-foreground: 0 0% 95%; /* Light text on popover */

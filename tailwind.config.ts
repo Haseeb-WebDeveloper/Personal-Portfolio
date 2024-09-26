@@ -63,7 +63,18 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+  		// section: {
+  		// 	maxWidth: '1400px',
+  		// 	padding: {
+  		// 		DEFAULT: '10px', // Small screens
+  		// 		sm: '10px',     // Small screens
+  		// 		md: '16px',     // Medium screens
+  		// 		lg: '20px',     // Large screens
+  		// 		xl: '30px',     // Extra large screens
+  		// 	},
+  		// 	backgroundColor: '#f0f0f0', // Added background color
+  		// }
   	}
   },
   plugins: [require("tailwindcss-animate")],
