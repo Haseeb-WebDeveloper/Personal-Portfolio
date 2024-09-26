@@ -2,9 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/* global.css or base.css */
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/Caros.woff2') format('woff2'),
+       url('/fonts/Caros.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/CarosBold.woff2') format('woff2'),
+       url('/fonts/CarosBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/CarosLight.woff2') format('woff2'),
+       url('/fonts/CarosLight.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/CarosMedium.woff2') format('woff2'),
+       url('/fonts/CarosMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/CarosThin.woff2') format('woff2'),
+       url('/fonts/CarosThin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Caros';
+  src: url('/fonts/CarosHeavy.woff2') format('woff2'),
+       url('/fonts/CarosHeavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* body {
+  font-family: 'Caros', sans-serif;
+} */
 
 @layer utilities {
   .text-balance {

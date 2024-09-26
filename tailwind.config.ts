@@ -9,6 +9,14 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			caros: ['Caros', 'sans-serif'],
+			'caros-bold': ['CarosBold', 'sans-serif'],
+			'caros-light': ['CarosLight', 'sans-serif'],	
+			'caros-medium': ['CarosMedium', 'sans-serif'],
+			'caros-thin': ['CarosThin', 'sans-serif'],
+			'caros-heavy': ['CarosHeavy', 'sans-serif'],
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
