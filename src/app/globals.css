@@ -2,21 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -25,3 +11,72 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    --background: 0 0% 95%; /* Light background */
+    --foreground: 0 0% 5.1%; /* Dark foreground */
+    --card: 0 0% 95%; /* White card */
+    --card-foreground: 0 0% 5.1%; /* Dark text on card */
+    --popover: 0 0% 95%; /* White popover */
+    --popover-foreground: 0 0% 5.1%; /* Dark text on popover */
+    --primary: 78 88% 67%; /* Light green for buttons */
+    --primary-foreground: 100 9% 13%; /* White text on primary */
+    --secondary: 100 9% 13%; /* Dark green background */
+    --secondary-foreground: 0 0% 95%; /* White text on secondary */
+    --muted: 227 8% 33%; /* Muted text */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Muted foreground */
+    --accent: 210 6.6% 36.9%; /* Muted text for accent */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --destructive: 0 84.2% 60.2%; /* Destructive color */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive */
+    --border: 0 0% 92.5%; /* Light border */
+    --input: 0 0% 92.5%; /* Light input background */
+    --ring: 78 88% 67%; /* Light green ring */
+    --chart-1: 12 76% 61%; /* Chart color 1 */
+    --chart-2: 173 58% 39%; /* Chart color 2 */
+    --chart-3: 197 37% 24%; /* Chart color 3 */
+    --chart-4: 43 74% 66%; /* Chart color 4 */
+    --chart-5: 27 87% 67%; /* Chart color 5 */
+    --radius: 0.5rem; /* Border radius */
+  }
+  .dark {
+    --background: 0 0% 5.1%; /* Dark background */
+    --foreground: 0 0% 95%; /* Light foreground */
+    --card: 0 0% 5.1%; /* Dark card */
+    --card-foreground: 0 0% 95%; /* Light text on card */
+    --popover: 0 0% 5.1%; /* Dark popover */
+    --popover-foreground: 0 0% 95%; /* Light text on popover */
+    --primary: 0 0% 100%; /* White primary */
+    --primary-foreground: 78 88% 67%; /* Light green text on primary */
+    --secondary: 78 88% 67%; /* Light green for secondary */
+    --secondary-foreground: 0 0% 5.1%; /* Dark text on secondary */
+    --muted: 0 0% 5.1%; /* Dark muted text */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Muted foreground */
+    --accent: 0 0% 5.1%; /* Dark accent */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    --destructive: 0 62.8% 30.6%; /* Dark destructive color */
+    --destructive-foreground: 0 0% 100%; /* White text on destructive */
+    --border: 0 0% 10%; /* Dark border */
+    --input: 0 0% 10%; /* Dark input background */
+    --ring: 0 0% 100%; /* White ring */
+    --chart-1: 12 76% 61%; /* Chart color 1 */
+    --chart-2: 173 58% 39%; /* Chart color 2 */
+    --chart-3: 197 37% 24%; /* Chart color 3 */
+    --chart-4: 43 74% 66%; /* Chart color 4 */
+    --chart-5: 27 87% 67%; /* Chart color 5 */
+    --radius: 0.5rem; /* Border radius */
+}
+
+}
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
