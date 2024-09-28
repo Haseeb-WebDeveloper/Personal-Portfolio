@@ -49,6 +49,16 @@
 }
 
 
+  
+@font-face {
+  font-family: 'coolCon';
+  src: url('/fonts/coolvetica_condensed_rg-webfont.woff2') format('woff2'),
+       url('/fonts/coolvetica_condensed_rg-webfont.woff') format('woff');
+} 
+
+body{
+  font-family: 'coolCon', sans-serif;
+}
 
 .font-caros{
   font-family: 'Caros', sans-serif;
@@ -75,28 +85,32 @@
 }
 
 
+.font-coolcon{
+  font-family: 'coolCon', sans-serif;
+}
 
 
 .section {
   max-width: 1400px;
-  margin: 0px 12px;
+  padding: 0px 12px;
+  margin: 0 auto; 
 }
 
 @media (min-width: 768px) { /* md */
   .section {
-    margin: 0px 16px;
+    padding: 0px 30px;
   }
 }
 
 @media (min-width: 1024px) { /* lg */
   .section {
-    margin: 0px 20px;
+    padding: 0px 40px;
   }
 }
 
 @media (min-width: 1280px) { /* xl */
   .section {
-    margin: 0px 30px;
+    padding: 0px 40px;
   }
 }
 
@@ -119,8 +133,10 @@
     --primary-foreground: 100 9% 13%; /* White text on primary */
     --secondary: 100 9% 13%; /* Dark green background */
     --secondary-foreground: 0 0% 95%; /* White text on secondary */
-    --muted: 227 8% 33%; /* Muted text */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Muted foreground */
+    --tertiary: 159 92% 10%; /* Dark green background */
+    --tertiary-foreground: 0 0% 95%; /* White text on tertiary */
+    --muted: 0 0% 78%; /* Muted text */
+    --muted-foreground: 0 0% 30%; /* Muted foreground */
     --accent: 210 6.6% 36.9%; /* Muted text for accent */
     --accent-foreground: 0 0% 100%; /* White text on accent */
     --destructive: 0 84.2% 60.2%; /* Destructive color */
@@ -146,6 +162,8 @@
     --primary-foreground: 78 88% 67%; /* Light green text on primary */
     --secondary: 78 88% 67%; /* Light green for secondary */
     --secondary-foreground: 0 0% 5.1%; /* Dark text on secondary */
+    --tertiary: 0 00% 95%; /* Dark green background */
+    --tertiary-foreground: 159 92% 10%; /* White text on tertiary */
     --muted: 0 0% 5.1%; /* Dark muted text */
     --muted-foreground: 215.4 16.3% 46.9%; /* Muted foreground */
     --accent: 0 0% 5.1%; /* Dark accent */
@@ -175,3 +193,16 @@
   }
 }
 
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logoSilder {
+  animation: slide 15s linear infinite;
+}
