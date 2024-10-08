@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/global/navbar";
-
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 
 
 
@@ -19,11 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
         <body
-          className={"antialiased"}
+          className={`${GeistSans.className}  antialiased`}
       >
       <ThemeProvider
         attribute="class"
-        defaultTheme="light"
+        defaultTheme="dark"
         enableSystem
         disableTransitionOnChange
         >          

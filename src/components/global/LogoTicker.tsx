@@ -13,11 +13,11 @@ export const LogoTicker: React.FC = () => {
   ];
 
   return (
-    <section className='py-4 md:py-6 bg-foreground rounded-b-2xl overflow-hidden mx-auto'>
+    <section className='py-4 md:py-6 bg-foreground/5 rounded-b-2xl overflow-hidden mx-auto'>
         <div className='mx-auto relative'>
           <div className='LogoeConatiner overflow-hidden flex items-center justify-start border-none'>
-            <div className='absolute z-[10] top-0 left-[-2px] w-28 h-full bg-gradient-to-r from-foreground to-transparent'></div>
-            <div className='absolute z-[10] top-0 right-[-2px] w-28  h-full bg-gradient-to-l from-foreground to-transparent'></div>
+            <div className='absolute z-[10] top-0 left-[-2px] w-28 h-full bg-gradient-to-r from-[#181818] to-transparent'></div>
+            <div className='absolute z-[10] top-0 right-[-2px] w-28  h-full bg-gradient-to-l from-[#181818] to-transparent'></div>
             <div className='logoSilder flex flex-none'>
               {logos.map((logo, index) => (
                 <Image
@@ -26,7 +26,7 @@ export const LogoTicker: React.FC = () => {
                   width={900}
                   height={900}
                   alt={`Logo ${index + 1}`}
-                  className='hh-4 w-auto mx-4'
+                  className='h-4 md:h-5 w-auto mx-4'
                 />
               ))}
             </div>
@@ -38,7 +38,7 @@ export const LogoTicker: React.FC = () => {
                   width={900}
                   height={900}
                   alt={`Logo ${index + 1}`}
-                  className='hh-4 w-auto mx-4'
+                  className='h-4 md:h-5 w-auto mx-4'
                 />
               ))}
             </div>
@@ -50,7 +50,7 @@ export const LogoTicker: React.FC = () => {
                   width={900}
                   height={900}
                   alt={`Logo ${index + 1}`}
-                  className='hh-4 w-auto mx-4'
+                  className='h-4 md:h-5 w-auto mx-4'
                 />
               ))}
             </div>

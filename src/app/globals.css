@@ -3,93 +3,6 @@
 @tailwind utilities;
 
 
-@font-face {
-  font-family: 'Caros';
-  src: url('/fonts/Caros.woff2') format('woff2'),
-       url('/fonts/Caros.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CarosBold';
-  src: url('/fonts/CarosBold.woff2') format('woff2'),
-       url('/fonts/CarosBold.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CarosLight';
-  src: url('/fonts/CarosLight.woff2') format('woff2'),
-       url('/fonts/CarosLight.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CarosMedium';
-  src: url('/fonts/CarosMedium.woff2') format('woff2'),
-       url('/fonts/CarosMedium.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CarosThin';
-  src: url('/fonts/CarosThin.woff2') format('woff2'),
-       url('/fonts/CarosThin.woff') format('woff');
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'CarosHeavy';
-  src: url('/fonts/CarosHeavy.woff2') format('woff2'),
-}
-
-
-  
-@font-face {
-  font-family: 'coolCon';
-  src: url('/fonts/coolvetica_condensed_rg-webfont.woff2') format('woff2'),
-       url('/fonts/coolvetica_condensed_rg-webfont.woff') format('woff');
-} 
-
-body{
-  font-family: 'coolCon', sans-serif;
-}
-
-.font-caros{
-  font-family: 'Caros', sans-serif;
-}
-
-.font-caros-bold{
-  font-family: 'CarosBold', sans-serif;
-}
-
-.font-caros-light{
-  font-family: 'CarosLight', sans-serif;
-}
-
-.font-caros-medium{
-  font-family: 'CarosMedium', sans-serif;
-}
-
-.font-caros-thin{
-  font-family: 'CarosThin', sans-serif;
-}
-
-.font-caros-heavy{
-  font-family: 'CarosHeavy', sans-serif;
-}
-
-
-.font-coolcon{
-  font-family: 'coolCon', sans-serif;
-}
-
-
 .section {
   max-width: 1400px;
   padding: 0px 12px;
@@ -115,6 +28,24 @@ body{
 }
 
 
+.section-my {
+  margin: 30px auto;
+}
+
+@media (min-width: 768px) {
+  .section-my {
+    margin: 40px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-my {
+    margin: 120px auto;
+  }
+}
+
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -125,7 +56,7 @@ body{
   :root {
     --background: 0 0% 95%; /* Light background */
     --foreground: 0 0% 5.1%; /* Dark foreground */
-    --card: 0 0% 88%; /* White card */
+    --card: 0 0% 92%; /* White card */
     --card-foreground: 0 0% 5.1%; /* Dark text on card */
     --popover: 0 0% 95%; /* White popover */
     --popover-foreground: 0 0% 5.1%; /* Dark text on popover */
@@ -136,7 +67,7 @@ body{
     --tertiary: 159 92% 10%; /* Dark green background */
     --tertiary-foreground: 0 0% 95%; /* White text on tertiary */
     --muted: 0 0% 78%; /* Muted text */
-    --muted-foreground: 0 0% 30%; /* Muted foreground */
+    --muted-foreground: 0 0% 70%; /* Muted foreground */
     --accent: 210 6.6% 36.9%; /* Muted text for accent */
     --accent-foreground: 0 0% 100%; /* White text on accent */
     --destructive: 0 84.2% 60.2%; /* Destructive color */
@@ -144,11 +75,9 @@ body{
     --border: 0 0% 92.5%; /* Light border */
     --input: 0 0% 92.5%; /* Light input background */
     --ring: 78 88% 67%; /* Light green ring */
-    --chart-1: 12 76% 61%; /* Chart color 1 */
-    --chart-2: 173 58% 39%; /* Chart color 2 */
-    --chart-3: 197 37% 24%; /* Chart color 3 */
-    --chart-4: 43 74% 66%; /* Chart color 4 */
-    --chart-5: 27 87% 67%; /* Chart color 5 */
+    --chart-1: 74 32% 76%; /* Chart color 1 */
+    --chart-2: 60 8% 90%; /* Chart color 2 */
+    --chart-3: 222, 81%, 94%; /* Chart color 3 */
     --radius: 0.5rem; /* Border radius */
   }
   .dark {
@@ -156,16 +85,16 @@ body{
     --foreground: 0 0% 95%; /* Light foreground */
     --card: 0 0% 10%; /* Dark card */
     --card-foreground: 0 0% 95%; /* Light text on card */
-    --popover: 0 0% 5.1%; /* Dark popover */
-    --popover-foreground: 0 0% 95%; /* Light text on popover */
-    --primary: 0 0% 100%; /* White primary */
-    --primary-foreground: 78 88% 67%; /* Light green text on primary */
-    --secondary: 78 88% 67%; /* Light green for secondary */
-    --secondary-foreground: 0 0% 5.1%; /* Dark text on secondary */
-    --tertiary: 0 00% 95%; /* Dark green background */
-    --tertiary-foreground: 159 92% 10%; /* White text on tertiary */
-    --muted: 0 0% 5.1%; /* Dark muted text */
-    --muted-foreground: 215.4 16.3% 46.9%; /* Muted foreground */
+    --popover: 0 0% 5.1%; /* White popover */
+    --popover-foreground: 0 0% 95%; /* Dark text on popover */
+    --primary: 78 88% 67%; /* Light green for buttons */
+    --primary-foreground: 100 9% 13%; /* White text on primary */
+    --secondary: 100 9% 13%; /* Dark green background */
+    --secondary-foreground: 0 0% 95%; /* White text on secondary */
+    --tertiary: 159 92% 10%; /* Dark green background */
+    --tertiary-foreground: 0 0% 95%; /* White text on tertiary */
+    --muted: 0 0% 20%; /* Dark muted text */
+    --muted-foreground: 0 0% 70%;; /* Muted foreground */
     --accent: 0 0% 5.1%; /* Dark accent */
     --accent-foreground: 0 0% 100%; /* White text on accent */
     --destructive: 0 62.8% 30.6%; /* Dark destructive color */
@@ -173,11 +102,9 @@ body{
     --border: 0 0% 10%; /* Dark border */
     --input: 0 0% 10%; /* Dark input background */
     --ring: 0 0% 100%; /* White ring */
-    --chart-1: 12 76% 61%; /* Chart color 1 */
-    --chart-2: 173 58% 39%; /* Chart color 2 */
-    --chart-3: 197 37% 24%; /* Chart color 3 */
-    --chart-4: 43 74% 66%; /* Chart color 4 */
-    --chart-5: 27 87% 67%; /* Chart color 5 */
+    --chart-1: 74 32% 76%; /* Chart color 1 */
+    --chart-2: 60 8% 90%; /* Chart color 2 */
+    --chart-3: 222, 81%, 94%; /* Chart color 3 */
     --radius: 0.5rem; /* Border radius */
 }
 
@@ -205,4 +132,38 @@ body{
 
 .logoSilder {
   animation: slide 15s linear infinite;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+  /* width: 8px;  */
+}
+/* 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #59e801; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #42dc00; 
+} */
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll linear infinite var(--animation-duration, 70s);
+  animation-direction: var(--animation-direction, forwards);
 }

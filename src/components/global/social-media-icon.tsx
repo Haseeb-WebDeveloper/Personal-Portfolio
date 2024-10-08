@@ -7,18 +7,18 @@ type Props = {}
 
 function SocialMediaIcon({ }: Props) {
     return (
-        <div className='flex justify-center'>
-            <div className='p-1 rounded-3xl inline-flex gap-1 bg-secondary shadow-lg'>
-                <Link href='/' className='text-foreground px-3 py-2 rounded-2xl bg-primary hover:bg-black transition ease-linear decoration-neutral-300'>
+        <div className=''>
+            <div className=' inline-flex gap-3 '>
+                <Link href='/' className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
                     <FaLinkedinIn size={20} />
                 </Link>
-                <Link href='/' className='text-foreground px-3 py-2 rounded-2xl bg-primary hover:bg-primary/40 transition ease-linear decoration-neutral-300'>
+                <Link href='/' className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
                     <FaGithub size={20} />
                 </Link>
-                <Link href='/' className='text-foreground px-3 py-2 rounded-2xl bg-primary hover:bg-primary/40 transition ease-linear decoration-neutral-300'>
+                <Link href='/' className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
                     <SiUpwork size={20} />
                 </Link>
-                <Link href='/' className='text-foreground px-3 py-2 rounded-2xl bg-primary hover:bg-primary/40 transition ease-linear decoration-neutral-300'>
+                <Link href='/' className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
                     <BsInstagram size={20} />
                 </Link>
             </div>
