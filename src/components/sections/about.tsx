@@ -10,8 +10,8 @@ const About = (props: Props) => {
   return (
     <section id='about' className='section section-my  '>
       <div className='py-20'>
-        <div className=' flex flex-col md:flex-row justify-between items-center gap-8 md:gap-16'>
-            <div className='md:w-[60%] w-full flex flex-col gap-6'>
+        <div className=' flex flex-col md:flex-row justify-between items-center gap-16'>
+            <div className='md:w-[60%] w-full flex flex-col gap-4'>
               {/* <div>
               <h1 className='border rounded-full px-3 w-fit bg-foreground/5 text-foreground/80 hover:text-foreground/90 transition-all duration-300 py-1 inline-flex text-sm font-normal leading-normal tracking-wide shadow-sm'>Frontend Website Developer</h1>
               </div> */}
@@ -21,13 +21,15 @@ const About = (props: Props) => {
               </h3>
               <div className='mt-8 flex justify-start gap-4'>
                 <UpDownButton text="Let's Talk" />
+                <div className='hidden md:flex ' >
                 <SocialMediaIcon/>
+                </div>
               </div>
               </div>
             </div>
-            <div id="image" className='flex gap-2'>
-                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' max-w-[200px] rotate-[15deg]' />
-                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' max-w-[200px] rotate-[5deg]' />
+            <div id="image" className='flex flex-col md:flex-row gap-2 '>
+                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500  md:rotate-[15deg] rounded-md md:w-[300px] md:h-[300px]' />
+                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500  md:rotate-[5deg] rounded-md md:w-[300px] md:h-[300px]' />
             </div>
         </div>
       </div>

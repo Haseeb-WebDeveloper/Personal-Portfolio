@@ -7,6 +7,7 @@ import Testimonial from '@/components/sections/testimonial';
 import Footer from '@/components/sections/footer';
 import Tools from '@/components/sections/tools';
 import CallToAction from '@/components/sections/call-to-action';
+import Projects from '@/components/sections/projects';
 
 const Home = () => {
     
@@ -18,6 +19,7 @@ const Home = () => {
       <Tools />
       {/* <Feature feature={featureData}/> */}
       {/* <Testimonial /> */}
+      <Projects/>
       <CallToAction />
       <Footer />
     </>

@@ -7,13 +7,13 @@ const Tools = (props: Props) => {
   return (
     <section className='section section-my'>
         <div className='flex flex-col items-center justify-center gap-12'>
-            <div className="text">
-                <h2 className='text-5xl font-medium text-center max-w-lg mx-auto  leading-none'>You'll catch me doing 
+            <div className="text ">
+                <h2 className='text-3xl md:text-5xl font-medium text-center max-w-lg mx-auto  leading-none'>You'll catch me doing 
                 a combo of these:</h2>
             </div>
-            <div className='flex flex-col md:flex-row gap-4 items-start'>
+            <div className='w-full flex flex-col md:flex-row gap-4 items-start md:justify-center'>
                 {/* things I create */}
-                <div className='w-[300px] rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
+                <div className='md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
                     <div className='bg-chart-1 text-background font-medium rounded-t-md p-2'>
                         <h3 className='text-md text-center'>Things I Create</h3>
                     </div>
@@ -29,7 +29,7 @@ const Tools = (props: Props) => {
                 </div>
 
                 {/* for product in */}
-                <div className='mt-4 w-[300px]  rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
+                <div className='mt-4 md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
                     <div className='bg-chart-2 text-background font-medium rounded-t-md p-2'>
                         <h3 className='text-md text-center'>For Product In</h3>
                     </div>
@@ -45,7 +45,7 @@ const Tools = (props: Props) => {
                 </div>
 
                 {/* tools i use */}
-                <div className='w-[300px] rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
+                <div className='md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
                     <div className='bg-chart-3 text-background font-medium rounded-t-md p-2'>
                         <h3 className='text-md text-center'>Tools I Use</h3>
                     </div>
