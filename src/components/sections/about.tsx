@@ -27,9 +27,9 @@ const About = (props: Props) => {
               </div>
               </div>
             </div>
-            <div id="image" className='flex flex-col md:flex-row gap-2 '>
-                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500  md:rotate-[15deg] rounded-md md:w-[300px] md:h-[300px]' />
-                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500  md:rotate-[5deg] rounded-md md:w-[300px] md:h-[300px]' />
+            <div id="image" className='flex flex-col md:flex-row gap-2 bg-red-500'>
+                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' />
+                {/* <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' /> */}
             </div>
         </div>
       </div>

@@ -11,13 +11,13 @@ function CallToAction() {
             <section className="section">
                 <div id="Contact" className='mb-4 md:mb-8 mt-20 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl py-8 md:py-12 px-4 md:px-16 bg-foreground/5 flex flex-col gap-12'>
                     <div className="w-full flex flex-col gap-12 mx-auto ">
-                        <div className="flex flex-col gap-12 ">
+                        <div className="flex flex-col gap-10 ">
                             <div className="flex flex-col gap-8 ">
-                                <p className=' text-center md:text-left text-3xl md:text-5xl font-medium  text-foreground/95 max-w-[700px] leading-tight tracking-[-1px] '>Ready to <span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
+                                <p className='  md:text-left text-3xl md:text-5xl font-medium  text-foreground/95 max-w-[700px] leading-snug tracking-[-1px] '><span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
                                 <p className='font-medium text-center md:text-left text-4xl md:text-5xl max-w-[700px] leading-tight tracking-[-1px] '>Let's make it happen!✨</p>
                             </div>
                             <div className="flex justify-center md:justify-start">
-                                <UpDownButton text="Start a Project" size="large" />
+                                <UpDownButton text="Let's Talk" />
                             </div>
                         </div>
                     </div>
