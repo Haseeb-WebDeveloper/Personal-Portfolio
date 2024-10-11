@@ -14,6 +14,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
+
   return (
     <html lang="en">
         <body
@@ -25,7 +28,9 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
         >          
+       
             {children}
+        
         </ThemeProvider>
       </body>
     </html>

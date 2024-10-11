@@ -141,7 +141,7 @@ html {
 
 
 ::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
   width: 8px; 
 }
 
