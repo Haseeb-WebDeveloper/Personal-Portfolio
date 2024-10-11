@@ -10,7 +10,7 @@ import CallToAction from '@/components/sections/call-to-action';
 import Projects from '@/components/sections/projects';
 
 const Home = () => {
-    
+
   return (
     <>
       <Navbar />

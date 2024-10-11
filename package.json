@@ -16,7 +16,6 @@
     "@react-three/fiber": "^8.17.8",
     "@react-three/rapier": "^1.4.0",
     "@splinetool/react-spline": "^4.0.0",
-    "@studio-freight/lenis": "^1.0.42",
     "aceternity-ui": "^0.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",

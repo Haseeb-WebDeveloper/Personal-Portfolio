@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GeistSans } from 'geist/font/sans';
-import { GeistMono } from 'geist/font/mono';
-
-
+// import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
   title: "Haseeb Ahmed | Portfolio",

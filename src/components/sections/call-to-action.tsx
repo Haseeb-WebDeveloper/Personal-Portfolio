@@ -13,7 +13,7 @@ function CallToAction() {
                     <div className="w-full flex flex-col gap-12 mx-auto ">
                         <div className="flex flex-col gap-10 ">
                             <div className="flex flex-col gap-8 ">
-                                <p className='  md:text-left text-3xl md:text-5xl font-medium  text-foreground/95 max-w-[700px] leading-snug tracking-[-1px] '><span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
+                                <p className=' text-center md:text-left text-3xl md:text-5xl font-medium  text-foreground/95 max-w-[700px] leading-snug tracking-[-1px] '><span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
                                 <p className='font-medium text-center md:text-left text-4xl md:text-5xl max-w-[700px] leading-tight tracking-[-1px] '>Let's make it happen!✨</p>
                             </div>
                             <div className="flex justify-center md:justify-start">

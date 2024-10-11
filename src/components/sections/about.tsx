@@ -10,7 +10,7 @@ const About = (props: Props) => {
   return (
     <section id='about' className='section section-my  '>
       <div className='py-20'>
-        <div className=' flex flex-col md:flex-row justify-between items-center gap-16'>
+        <div className=' flex flex-col md:flex-row justify-between items-center gap-12'>
             <div className='md:w-[60%] w-full flex flex-col gap-4'>
               {/* <div>
               <h1 className='border rounded-full px-3 w-fit bg-foreground/5 text-foreground/80 hover:text-foreground/90 transition-all duration-300 py-1 inline-flex text-sm font-normal leading-normal tracking-wide shadow-sm'>Frontend Website Developer</h1>
@@ -27,8 +27,8 @@ const About = (props: Props) => {
               </div>
               </div>
             </div>
-            <div id="image" className='flex flex-col md:flex-row gap-2 bg-red-500'>
-                <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' />
+            <div id="image" className='flex flex-col md:flex-row gap-2 '>
+                <Image src='/haseeb.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' object-contain max-w-[250px]  rounded-md' />
                 {/* <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' /> */}
             </div>
         </div>
