@@ -5,7 +5,7 @@ import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { SiUpwork } from 'react-icons/si'
 type Props = {}
 
-function SocialMediaIcon({ }: Props) {
+function SocialMediaIcon() {
     return (
         <div className=''>
             <div className=' inline-flex gap-3 '>

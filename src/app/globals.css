@@ -2,11 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+.kalam-light {
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+}
+
+
 html {
   scroll-behavior: smooth;
   /* overflow: hidden; */
 }
 
+.hero-section{
+  
+}
 
 .section {
   max-width: 1400px;
@@ -171,4 +183,21 @@ html {
 .animate-scroll {
   animation: scroll linear infinite var(--animation-duration, 70s);
   animation-direction: var(--animation-direction, forwards);
+}
+
+
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #555;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

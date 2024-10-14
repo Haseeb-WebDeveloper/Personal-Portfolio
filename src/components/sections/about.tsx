@@ -5,11 +5,11 @@ import UpDownButton from '../ui/up-down-button'
 
 type Props = {}
 
-const About = (props: Props) => {
+const About = () => {
 
   return (
-    <section id='about' className='section section-my  '>
-      <div className='py-20'>
+    <section id='about' className='section  '>
+      <div className='md:py-20 pb-20'>
         <div className=' flex flex-col md:flex-row justify-between items-center gap-12'>
             <div className='md:w-[60%] w-full flex flex-col gap-4'>
               {/* <div>
@@ -28,7 +28,7 @@ const About = (props: Props) => {
               </div>
             </div>
             <div id="image" className='flex flex-col md:flex-row gap-2 '>
-                <Image src='/haseeb.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' object-contain max-w-[250px]  rounded-md' />
+                <Image src='/haseeb.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' object-cover max-h-[380px] md:max-h-full object-top md:max-w-[250px] max-w-full rounded-md' />
                 {/* <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' /> */}
             </div>
         </div>
