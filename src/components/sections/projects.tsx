@@ -21,7 +21,7 @@ export default function Projects() {
       scrollTrigger: {
         trigger: ".horizontal-wrapper",
         start: "top 2%", 
-        end: "+=" + 100 * panelsArray.length + "%",
+        end: "+=" + 130 * panelsArray.length + "%",
         pin: "#mainContainer",
         scrub: 2,
         markers: false
@@ -56,12 +56,12 @@ export default function Projects() {
                     <div className="absolute top-[35%] -translate-y-1/2 left-[40%] w-[100px] h-[100px]">
                       <Star/>
                     </div>
-                    <div className="absolute top-20 left-10 w-[100px] h-[100px]">
+                    {/* <div className="absolute top-20 left-10 w-[100px] h-[100px]">
                       <Flower />
-                    </div>
-                    <div className="absolute top-[50%] -translate-y-1/2 left-[55%] w-[150px] h-[100px]">
+                    </div> */}
+                    {/* <div className="absolute top-[50%] -translate-y-1/2 left-[55%] w-[150px] h-[100px]">
                       <Star_2/>
-                    </div>
+                    </div> */}
                     <div className="absolute top-[30%] -translate-y-1/2 left-[80%] -translate-x-1/2 w-[350px] h-[100px]">
                       <Image src="/coding2.svg" alt="" width={500} height={500} className="object-contain"/>
                     </div>
@@ -70,7 +70,7 @@ export default function Projects() {
             </div>
            {
             projectData.map((project) => (
-              <div key={project.title} className="panel section w-full h-[96%] rounded-md  flex-grow flex-shrink-0 basis-full  bg-foreground/[2%] ">
+              <div key={project.title} className="panel  section w-full h-[96%] rounded-md  flex-grow flex-shrink-0 basis-full  bg-foreground/[2%] ">
               <div className=" w-[100%] h-full section">
                 {/* Two columns one for text and one for image */}
                 <div className="flex flex-col md:flex-row justify-between gap-10 h-full py-6 md:py-10 ">
