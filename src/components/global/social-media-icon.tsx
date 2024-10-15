@@ -1,9 +1,7 @@
 import Link from 'next/link'
-import React from 'react'
 import { BsInstagram } from 'react-icons/bs'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import { SiUpwork } from 'react-icons/si'
-type Props = {}
 
 function SocialMediaIcon() {
     return (

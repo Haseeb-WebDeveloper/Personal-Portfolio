@@ -1,12 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
 import SocialMediaIcon from '../global/social-media-icon'
 import UpDownButton from '../ui/up-down-button'
 
-type Props = {}
 
 const About = () => {
-
   return (
     <section id='about' className='section  '>
       <div className='md:py-20 pb-20'>

@@ -1,7 +1,4 @@
 import { forProductIn, thingsICreate, toolsIUse } from '@/app/data/tools-data'
-import React from 'react'
-
-type Props = {}
 
 const Tools = () => {
   return (

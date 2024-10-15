@@ -1,1 +1,1 @@
-declare module '@splinetool/react-spline/next';
+// declare module '@splinetool/react-spline/next';

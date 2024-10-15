@@ -2,11 +2,8 @@
 import Link from 'next/link'
 import React, { useEffect } from 'react'
 import Image from 'next/image'
-// import { ModeToggle } from '../ui/mode-toggle'
 import UpDownButton from '../ui/up-down-button'
 import { gsap } from 'gsap';
-
-type Props = {}
 
 function Navbar() {
 
