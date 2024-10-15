@@ -59,8 +59,8 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="section mt-10">
-      <div className="mt-24 xl:mt-28">
+    <section className="section mt-10 section-my">
+      <div className="mt-24 xl:mt-0 ">
         <div className="flex flex-col gap-16">
           <div>
             <h1

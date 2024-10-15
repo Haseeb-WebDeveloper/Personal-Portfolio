@@ -58,6 +58,23 @@ html {
 }
 
 
+.section-py {
+  padding: 30px 0 30px 0;
+}
+
+@media (min-width: 768px) {
+  .section-py {
+    padding: 40px 0 40px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-py {
+    padding: 120px 0 120px 0;
+  }
+}
+
+
 
 @layer utilities {
   .text-balance {

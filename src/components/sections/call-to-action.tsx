@@ -7,11 +7,10 @@ import SocialMediaIcon from "../global/social-media-icon"
 
 function CallToAction() {
 
-    // const Upwork = "https://www.upwork.com/freelancers/wasifwordpresswebsitedeveloper"
     return (
         <>
             <section className="section">
-                <div id="Contact" className='mb-4 md:mb-8 mt-20 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl py-8 md:py-12 px-4 md:px-16 bg-foreground/5 flex flex-col gap-12'>
+                <div id="Contact" className='mb-4 md:mb-8 mt-8 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl px-6 py-8 md:py-12 md:px-16 bg-foreground/5 flex flex-col gap-12'>
                     <div className="w-full flex flex-col md:flex-row gap-12 mx-auto justify-between items-center">
                         <div className="flex flex-col gap-8 ">
                             <div className="flex flex-col gap-6 ">
@@ -22,7 +21,7 @@ function CallToAction() {
                                 <UpDownButton text="Let's Talk" />
                             </div>
                         </div>
-                        <div className="w-[40%] h-full flex justify-center items-end">
+                        <div className="nd:w-[40%] w-full h-full flex justify-center items-end">
                             <Image src="/contact.svg" alt="" width={600} height={600} className="object-contain w-full h-full"/>
                         </div>
                     </div>
