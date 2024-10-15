@@ -21,7 +21,7 @@ function CallToAction() {
                                 <UpDownButton text="Let's Talk" />
                             </div>
                         </div>
-                        <div className="nd:w-[40%] w-full h-full flex justify-center items-end">
+                        <div className="md:w-[40%] w-full h-full flex justify-center items-end">
                             <Image src="/contact.svg" alt="" width={600} height={600} className="object-contain w-full h-full"/>
                         </div>
                     </div>

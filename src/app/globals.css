@@ -17,7 +17,7 @@ html {
 }
 
 .section {
-  max-width: 1400px;
+  max-width: 1600px;
   padding: 0px 12px;
   margin: 0 auto; 
 }
@@ -58,21 +58,21 @@ html {
 }
 
 
-.section-py {
-  padding: 30px 0 30px 0;
+/* .section-py {
+  padding: 30px auto;
 }
 
 @media (min-width: 768px) {
   .section-py {
-    padding: 40px 0 40px 0;
+    padding: 40px auto;
   }
 }
 
 @media (min-width: 1024px) {
   .section-py {
-    padding: 120px 0 120px 0;
+    padding: 120px auto;
   }
-}
+} */
 
 
 
