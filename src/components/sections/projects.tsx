@@ -63,7 +63,7 @@ export default function Projects() {
                 <div className=" w-[100%] h-full flex flex-col md:flex-row items-center justify-between ">
                   <div className="relative flex flex-col justify-around h-80 gap-8 w-full">
                     <div>
-                    <h2 id="mainText" className="text-2xl md:text-3xl font-semibold px-4 py-2 bg-primary  text-background rounded-md w-fit tracking-tight leading-none">See What I've Built</h2>
+                    <h2 id="mainText" className="text-2xl md:text-3xl font-semibold px-4 py-2 bg-primary  text-background rounded-md w-fit tracking-tight leading-none">See What I&apos;ve Built</h2>
                     </div>
                     <div>
                     <p className="text-md md:text-2xl font-normal max-w-2xl leading-tight">Browse through the projects that demonstrate my skills, creativity, and commitment to quality. Here’s where my ideas come to life.</p>

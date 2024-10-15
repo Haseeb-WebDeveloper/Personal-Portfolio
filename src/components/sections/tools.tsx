@@ -5,7 +5,7 @@ const Tools = () => {
     <section className='section section-my'>
         <div className='mb-28 flex flex-col items-center justify-center md:gap-12 gap-8'>
             <div className="text ">
-                <h2 className='text-3xl md:text-5xl font-medium text-center max-w-lg mx-auto  leading-none'>You'll catch me doing 
+                <h2 className='text-3xl md:text-5xl font-medium text-center max-w-lg mx-auto  leading-none'>You&apos;ll catch me doing 
                 a combo of these:</h2>
             </div>
             <div className='w-full flex flex-col md:flex-row gap-4 items-start md:justify-center'>

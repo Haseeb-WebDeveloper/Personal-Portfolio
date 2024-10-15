@@ -1,9 +1,9 @@
 'use client'
 // import dynamic from 'next/dynamic';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
-import UpDownButton from '../ui/up-down-button';
+// import UpDownButton from '../ui/up-down-button';
 
 // Dynamically import the Ai component with no SSR
 // const Ai = dynamic(() => import('../ui/3d-ai'), { ssr: false });
