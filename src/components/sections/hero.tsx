@@ -62,15 +62,12 @@ function HeroSection() {
   return (
     <section className=" section">     
       <div className="py-24 ">
-        <div className="flex flex-col gap-16">
-          <div>
-            <h1
-              id="text"
-              className="opacity-0 font-bold text-[2.5rem] md:text-[4.5rem] lg:text-[5.5rem] text-center leading-none md:leading-[5rem] tracking-[-1px] max-w-[940px] mx-auto"
-            >
+        <div className="flex flex-col gap-12 ">
+          <div className='flex flex-col gap-8'>
+            <h1 id="text" className="opacity-0 font-bold text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] text-center leading-none md:leading-[5rem] tracking-[-1px] max-w-[940px] mx-auto">
               I make businesses become <span className="text-tertiary dark:text-primary">unmatchable</span>
             </h1>
-            <div className="relative flex flex-wrap gap-2 mx-auto my-6 md:my-10 justify-center items-center">
+            <div className=" flex flex-wrap gap-2 mx-auto  justify-center items-center">
               <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/Designer.svg" alt="Designer" width={20} height={20} />
                 <p>Designer</p>
@@ -93,13 +90,19 @@ function HeroSection() {
             </div> */}
           </div>
 
-          <div className="flex flex-col md:flex-row justify-center items-end gap-4 px-2 md:px-4 mt-10 md:-mt-16">
+          <div className=" flex flex-col md:flex-row justify-center items-end ">
             {/* <div id="side-mockup" className="opacity-0 hidden md:flex  h-full justify-end items-center">
               <Image className="" src="/mockup-1.avif" alt="Mockup 1" width={400} height={200} />
             </div> */}
-            <div id="text" className="opacity-0 w-full h-full flex flex-col gap-8 md:mb-12">
-           
-              <video className="w-full  mx-auto rounded-[10px] shadow-sm border-[1px] border-tertiary/5" src="/showcase.mp4" autoPlay loop ></video>
+            <div id="text" className="opacity-0 w-full h-full flex flex-col gap-8 rounded-md ">
+              <video className="w-full lg:max-h-[96vh] mx-auto rounded-md flex-shrink-0" 
+                src="/showcase.mp4" 
+                autoPlay 
+                loop 
+                onMouseEnter={(e) => (e.target as HTMLVideoElement).muted = false} 
+                onMouseLeave={(e) => (e.target as HTMLVideoElement).muted = true} 
+                muted>
+              </video>
             </div>
             {/* <div id="side-mockup" className="opacity-0 hidden  h-full md:flex justify-end items-center">
               <Image className="" src="/mockup-2.avif" alt="Mockup 2" width={400} height={200} />

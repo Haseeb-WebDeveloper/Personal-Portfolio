@@ -6,10 +6,10 @@ import UpDownButton from '../ui/up-down-button'
 const About = () => {
   return (
     <section id='about' className='section  rounded-md'>
-      <div className='py-12 px-12 bg-primary/10 rounded-xl'>
+      <div className=' py-3 px-4 md:py-12 md:px-12 bg-primary/10 rounded-xl'>
         <div className=''>
         <div className=' flex flex-col md:flex-row justify-between items-center gap-12'>
-            <div className='md:w-[70%] w-full flex flex-col gap-4'>
+            <div className='md:w-[70%] w-full flex flex-col gap-2'>
               {/* <div>
               <h1 className='border rounded-full px-3 w-fit bg-foreground/5 text-foreground/80 hover:text-foreground/90 transition-all duration-300 py-1 inline-flex text-sm font-normal leading-normal tracking-wide shadow-sm'>Frontend Website Developer</h1>
               </div> */}

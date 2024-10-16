@@ -98,41 +98,41 @@ export default function Projects() {
             </div>
            {
             projectData.map((project, index) => (
-              <div key={project.title} className={`panel section w-full h-[96%] rounded-md flex-grow flex-shrink-0 basis-full bg-foreground/5 ${index === projectData.length - 1 ? 'mr-4' : ''}`}>
-              <div className=" w-[100%] h-full p-6  md:p-0">
+              <div key={project.title} className={`panel w-full h-[96%] rounded-md flex-grow flex-shrink-0 basis-full bg-foreground/5 ${index === projectData.length - 1 ? 'mr-4' : ''}`}>
+              <div className=" w-[100%] h-full p-4 md:py-8 md:px-10 overflow-hidden">
                 {/* Two columns one for text and one for image */}
-                <div className="flex flex-col md:flex-row justify-between gap-10 h-full md:py-10 ">
+                <div className="flex flex-col md:flex-row justify-between gap-10 h-full  ">
                   {/* Text column */}
-                  <div className="flex flex-col gap-10 justify-between">
+                  <div className="flex flex-col md:gap-10 gap-6 justify-between ">
                     {/* top text */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2 md:gap-4">
                       <h1 className="text-primary text-xl md:text-3xl font-medium max-w-2xl leading-none">{project.title}</h1>
-                      <p className="text-foreground/90 text-md md:text-lg font-light max-w-xl  leading-tight">
+                      <p className="text-foreground/90 text-sm md:text-lg font-light max-w-xl  leading-tight">
                       {project.description}
                       </p>
                     </div>
                     {/* bottom text */}
-                    <div className="flex flex-col gap-6 max-w-xl">
+                    <div className="flex flex-col md:gap-6 gap-8 max-w-xl ">
                       {/* row 1 */}
-                      <div className="flex gap-32 items-start">
+                      <div className="hidden md:flex gap-32 items-start ">
                         {/* duration */}
                         <div className="flex flex-col gap-2">
                           <p className="text-foreground/90 text-sm font-light">Duration</p>
-                          <p className="text-foreground/90 text-lg font-medium">{project.duration}</p>
+                          <p className="text-foreground/90 text-md font-medium leading-none">{project.duration}</p>
                         </div>
                         {/* category */}
                         <div className="flex flex-col gap-2">
                           <p className="text-foreground/90 text-sm font-light">Category</p>
-                          <p className="text-foreground/90 text-lg font-medium">{project.category}</p>
+                          <p className="text-foreground/90 text-md font-medium leading-none">{project.category}</p>
                         </div>
                       </div>
                       {/* row 2 */}
-                      <div className="flex flex-col gap-3">
+                      <div className="flex flex-col gap-2">
                         <p className="text-foreground/90 text-sm font-light">Tech Stack</p>
-                        <div className="flex gap-y-2.5 gap-x-2 max-w-md flex-wrap">
+                        <div className="flex gap-y-2.5 gap-x-2 max-w-xl flex-wrap">
                           {
                             project.tools.map((tool, index) => (
-                              <p key={tool} className={`${index === 0 ? "bg-chart-2 text-background font-semibold " : "bg-foreground/5 text-foreground/90 "}  text-sm font-normal rounded-full flex items-center justify-center px-4 py-1.5`}>{tool}</p>
+                              <p key={tool} className={`${index === 0 ? "bg-chart-2 text-background font-semibold " : "bg-foreground/5 text-foreground/90 "}  md:text-md text-xs font-normal rounded-full flex items-center justify-center px-3 py-1.5`}>{tool}</p>
                             ))
                           }
                         </div>
@@ -141,12 +141,12 @@ export default function Projects() {
                       <div className="flex gap-2">
                        { project.live &&  
                           <Link href={project.live} target="_blank">
-                            <p className="text-md font-light text-foreground/90 rounded-full border border-foreground/10 bg-background/5 hover:bg-background/60 transition ease-linear duration-100 px-8 py-1.5">View</p>
+                            <p className="bg-foreground/5 text-foreground/90 text-sm font-normal rounded-full flex items-center justify-center px-6 py-2">View</p>
                           </Link>
                         }
                         { project.code && 
                           <Link href={project.code} target="_blank">
-                            <p className="text-md font-light text-foreground/90 rounded-full border border-foreground/10 bg-background/5 hover:bg-background/60 transition ease-linear duration-100 px-8 py-1.5">Code</p>
+                            <p className="bg-foreground/5 text-foreground/90 text-sm font-normal rounded-full flex items-center justify-center px-6 py-2">Code</p>
                           </Link> 
                         }
                         

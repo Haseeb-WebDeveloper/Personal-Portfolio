@@ -57,6 +57,10 @@ html {
   }
 }
 
+.select-none {
+  user-select: none; /* Prevent text selection */
+}
+
 
 /* .section-py {
   padding: 30px auto;

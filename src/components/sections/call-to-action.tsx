@@ -14,8 +14,8 @@ function CallToAction() {
                     <div className="w-full flex flex-col md:flex-row gap-12 mx-auto justify-between items-center">
                         <div className="flex flex-col gap-8 ">
                             <div className="flex flex-col gap-6 ">
-                                <p className=' text-center md:text-left text-[2rem] md:text-[3rem] font-medium  text-foreground/95 max-w-[700px] leading-tight tracking-[-1px] '><span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
-                                <p className='font-medium text-center md:text-left text-[2rem] md:text-[3rem] max-w-[700px] leading-tight tracking-[-1px] '>Let&apos;s make it happen!✨</p>
+                                <p className='hidden md:block text-center md:text-left text-[2rem] md:text-[3rem] font-medium  text-foreground/95 max-w-[700px] leading-tight tracking-[-1px] '><span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
+                                <p className=' font-medium text-center md:text-left text-[2rem] md:text-[3rem] max-w-[700px] leading-tight tracking-[-1px] '>Now, let&apos;s make it happen! ✨</p>
                             </div>
                             <div className="flex justify-center md:justify-start">
                                 <UpDownButton text="Let's Talk" />

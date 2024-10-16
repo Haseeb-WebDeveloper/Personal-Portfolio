@@ -29,7 +29,7 @@ const projectData = [
     },
     {
       title: "Fuzzie Automation",
-      description: "This is an automation tool I developed to streamline tasks across Google Drive, Slack, Notion, and Discord, making it easy to manage workflows and increase productivity through seamless integration.",
+      description: "This is an automation tool I developed to streamline tasks across Google Drive, Slack, Notion, and Discord, making it easy to manage workflows.",
       duration: "3 weeks",
       category: "Software",
       tools: ["Next.js", "Tailwind", "Ngrok", "Prisma", "Neon Tech", "Clerk", "Google Apps Script", "Notion API", "Discord API", "Slack API", "Aceternity UI"],
