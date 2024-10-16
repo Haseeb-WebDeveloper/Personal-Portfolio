@@ -67,7 +67,7 @@ export default function Projects() {
                     </div>
                     <div>
                       <p className="text-md md:text-2xl font-normal max-w-2xl leading-tight">Browse through the projects that demonstrate my skills, creativity, and commitment to quality. Here’s where my ideas come to life.</p>
-                    <div className="absolute md:right-16 md:top-20 right-[40%] top-80 text-xl kalam-light text-foreground/60">
+                    <div className="absolute md:right-16 md:top-20 right-[40%] top-52 text-xl kalam-light text-foreground/60">
                       <p>....these are some<br/> of my project =)</p>
                     </div>
                     </div>
@@ -106,8 +106,8 @@ export default function Projects() {
                   <div className="flex flex-col md:gap-10 gap-6 justify-between ">
                     {/* top text */}
                     <div className="flex flex-col gap-2 md:gap-4">
-                      <h1 className="text-primary text-xl md:text-3xl font-medium max-w-2xl leading-none">{project.title}</h1>
-                      <p className="text-foreground/90 text-sm md:text-lg font-light max-w-xl  leading-tight">
+                      <h1 className="text-primary text-2xl md:text-3xl font-medium max-w-2xl leading-none">{project.title}</h1>
+                      <p className="text-md font-normal leading-tight text-foreground/90 text-[0.9rem] md:text-lg max-w-xl">
                       {project.description}
                       </p>
                     </div>
@@ -128,11 +128,11 @@ export default function Projects() {
                       </div>
                       {/* row 2 */}
                       <div className="flex flex-col gap-2">
-                        <p className="text-foreground/90 text-sm md:text-base font-light">Tech Stack</p>
+                        <p className="text-basero font-normal max-w-2xl leading-tight text-foreground/90 text-[0.9rem] md:text-base">Tech Stack</p>
                         <div className="flex gap-y-2.5 gap-x-2 max-w-xl flex-wrap">
                           {
                             project.tools.map((tool, index) => (
-                              <p key={tool} className={`${index === 0 ? "bg-foreground/10 text-foreground/90 " : "bg-foreground/5 text-foreground/90 "}  md:text-sm text-xs font-normal rounded-full flex items-center justify-center px-4 py-1.5`}>{tool}</p>
+                              <p key={tool} className={`${index === 0 ? "bg-foreground/10 text-foreground/90 " : "bg-foreground/5 text-foreground/90 "}  text-sm md:text-[0.92rem] font-normal rounded-full flex items-center justify-center px-4 py-1.5`}>{tool}</p>
                             ))
                           }
                         </div>

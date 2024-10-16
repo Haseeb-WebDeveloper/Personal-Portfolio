@@ -3,7 +3,7 @@ import { forProductIn, thingsICreate, toolsIUse } from '@/app/data/tools-data'
 const Tools = () => {
   return (
     <section className='section'>
-        <div className='pb-32 flex flex-col items-center justify-center md:gap-12 gap-8'>
+        <div className='pb-24 md:pb-32 flex flex-col items-center justify-center md:gap-12 gap-8'>
             <div className="text ">
                 <h2 className='text-3xl md:text-5xl font-medium text-center max-w-lg mx-auto  leading-none'>You&apos;ll catch me doing 
                 a combo of these:</h2>

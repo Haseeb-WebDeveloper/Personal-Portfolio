@@ -10,7 +10,7 @@ function CallToAction() {
     return (
         <>
             <section className="section">
-                <div id="Contact" className='mb-4 md:mb-8 mt-8 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl px-6 py-8 md:py-12 md:px-16 bg-chart-1/5 flex flex-col gap-12 bg-opacity-10 backdrop-blur-3xl'>
+                <div id="Contact" className='mb-4 md:mb-8 mt-8 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl py-6 px-4 md:py-12 md:px-16 bg-chart-1/5 flex flex-col gap-8 md:gap-12 bg-opacity-10 backdrop-blur-3xl'>
                     <div className="w-full flex flex-col md:flex-row gap-12 mx-auto justify-between items-center">
                         <div className="flex flex-col gap-8 ">
                             <div className="flex flex-col gap-6 ">
@@ -27,7 +27,7 @@ function CallToAction() {
                     </div>
                     <div className="bg-foreground/10 w-full h-[1px]"></div>
                     <div className="flex justify-between md:items-center flex-col md:flex-row gap-6">
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3 md:gap-4">
                             <div>
                                 <p className="text-foreground/80 text-md font-normal ]">Connect</p>
                             </div>
@@ -35,7 +35,7 @@ function CallToAction() {
                                 <Link href="mailto:web.dev.haseeb@gmail.com" className="text-foreground/90 hover:text-foreground text-xl md:text-2xl tracking-tighter leading-none">web.dev.haseeb@gmail.com</Link>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-3 md:gap-4">
                             <div>
                                 <p className="text-foreground/80 text-md font-normal ]">Social</p>
                             </div>
