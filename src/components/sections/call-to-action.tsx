@@ -10,7 +10,7 @@ function CallToAction() {
     return (
         <>
             <section className="section">
-                <div id="Contact" className='mb-4 md:mb-8 mt-8 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl px-6 py-8 md:py-12 md:px-16 bg-foreground/5 flex flex-col gap-12'>
+                <div id="Contact" className='mb-4 md:mb-8 mt-8 md:mt-24 lg:mt-20 mx-auto w-full rounded-xl px-6 py-8 md:py-12 md:px-16 bg-chart-1/5 flex flex-col gap-12 bg-opacity-10 backdrop-blur-3xl'>
                     <div className="w-full flex flex-col md:flex-row gap-12 mx-auto justify-between items-center">
                         <div className="flex flex-col gap-8 ">
                             <div className="flex flex-col gap-6 ">

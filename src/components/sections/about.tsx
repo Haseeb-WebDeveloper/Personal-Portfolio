@@ -5,8 +5,9 @@ import UpDownButton from '../ui/up-down-button'
 
 const About = () => {
   return (
-    <section id='about' className='section s rounded-md'>
-      <div className=''>
+    <section id='about' className='section  rounded-md'>
+      <div className='py-12 px-12 bg-primary/10 rounded-xl'>
+        <div className=''>
         <div className=' flex flex-col md:flex-row justify-between items-center gap-12'>
             <div className='md:w-[70%] w-full flex flex-col gap-4'>
               {/* <div>
@@ -28,6 +29,7 @@ const About = () => {
                 <Image src='/haseeb.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' object-cover max-h-[450px] md:max-h-[300px] object-top md:max-w-[250px] max-w-full rounded-md' />
                 {/* <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' /> */}
             </div>
+        </div>
         </div>
       </div>
     </section>

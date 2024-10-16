@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { gsap } from 'gsap';
+import UpDownButton from '../ui/up-down-button';
 // import UpDownButton from '../ui/up-down-button';
 
 // Dynamically import the Ai component with no SSR
@@ -59,8 +60,8 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="section mt-10 section-my">
-      <div className="mt-24 xl:mt-0 ">
+    <section className=" section">     
+      <div className="py-24 ">
         <div className="flex flex-col gap-16">
           <div>
             <h1
@@ -69,7 +70,7 @@ function HeroSection() {
             >
               I make businesses become <span className="text-tertiary dark:text-primary">unmatchable</span>
             </h1>
-            {/* <div className="relative flex flex-wrap gap-2 mx-auto mt-6 md:mt-10 justify-center items-center">
+            <div className="relative flex flex-wrap gap-2 mx-auto my-6 md:my-10 justify-center items-center">
               <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/Designer.svg" alt="Designer" width={20} height={20} />
                 <p>Designer</p>
@@ -86,37 +87,23 @@ function HeroSection() {
                 <Image src="/Shop.svg" alt="Shopify" width={20} height={20} />
                 <p>Shopify</p>
               </div>
+            </div>
+            {/* <div className='flex justify-center items-center pb-10'>
+              <UpDownButton text='lets talk' />
             </div> */}
           </div>
 
           <div className="flex flex-col md:flex-row justify-center items-end gap-4 px-2 md:px-4 mt-10 md:-mt-16">
-            <div id="side-mockup" className="opacity-0 hidden md:flex  h-full justify-end items-center">
+            {/* <div id="side-mockup" className="opacity-0 hidden md:flex  h-full justify-end items-center">
               <Image className="" src="/mockup-1.avif" alt="Mockup 1" width={400} height={200} />
-            </div>
+            </div> */}
             <div id="text" className="opacity-0 w-full h-full flex flex-col gap-8 md:mb-12">
-            <div className="relative flex flex-wrap gap-2 mx-auto mt-6 md:mt-10 justify-center items-center">
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
-                <Image src="/Designer.svg" alt="Designer" width={20} height={20} />
-                <p>Designer</p>
-              </div>
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
-                <Image src="/Developer.svg" alt="Developer" width={20} height={20} />
-                <p>Nextjs Developer</p>
-              </div>
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
-                <Image src="/wordpress-logo.png" alt="Wordpress" width={20} height={20} />
-                <p>Wordpress</p>
-              </div>
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
-                <Image src="/Shop.svg" alt="Shopify" width={20} height={20} />
-                <p>Shopify</p>
-              </div>
+           
+              <video className="w-full  mx-auto rounded-[10px] shadow-sm border-[1px] border-tertiary/5" src="/showcase.mp4" autoPlay loop ></video>
             </div>
-              <video className="w-full rounded-[10px] shadow-sm border-[1px] border-tertiary/5" src="/web-deign-presentation.mp4" autoPlay loop muted></video>
-            </div>
-            <div id="side-mockup" className="opacity-0 hidden  h-full md:flex justify-end items-center">
+            {/* <div id="side-mockup" className="opacity-0 hidden  h-full md:flex justify-end items-center">
               <Image className="" src="/mockup-2.avif" alt="Mockup 2" width={400} height={200} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
