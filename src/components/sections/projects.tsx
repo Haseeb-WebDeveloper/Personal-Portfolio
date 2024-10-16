@@ -117,22 +117,22 @@ export default function Projects() {
                       <div className="hidden md:flex gap-32 items-start ">
                         {/* duration */}
                         <div className="flex flex-col gap-2">
-                          <p className="text-foreground/90 text-sm font-light">Duration</p>
-                          <p className="text-foreground/90 text-md font-medium leading-none">{project.duration}</p>
+                            <p className="text-foreground/90 text-sm md:text-base font-light">Duration</p>
+                            <p className="text-foreground/90 text-md font-medium leading-none">{project.duration}</p>
                         </div>
                         {/* category */}
                         <div className="flex flex-col gap-2">
-                          <p className="text-foreground/90 text-sm font-light">Category</p>
+                          <p className="text-foreground/90 text-sm md:text-base font-light">Category</p>
                           <p className="text-foreground/90 text-md font-medium leading-none">{project.category}</p>
                         </div>
                       </div>
                       {/* row 2 */}
                       <div className="flex flex-col gap-2">
-                        <p className="text-foreground/90 text-sm font-light">Tech Stack</p>
+                        <p className="text-foreground/90 text-sm md:text-base font-light">Tech Stack</p>
                         <div className="flex gap-y-2.5 gap-x-2 max-w-xl flex-wrap">
                           {
                             project.tools.map((tool, index) => (
-                              <p key={tool} className={`${index === 0 ? "bg-chart-2 text-background font-semibold " : "bg-foreground/5 text-foreground/90 "}  md:text-md text-xs font-normal rounded-full flex items-center justify-center px-3 py-1.5`}>{tool}</p>
+                              <p key={tool} className={`${index === 0 ? "bg-foreground/10 text-foreground/90 " : "bg-foreground/5 text-foreground/90 "}  md:text-sm text-xs font-normal rounded-full flex items-center justify-center px-4 py-1.5`}>{tool}</p>
                             ))
                           }
                         </div>
@@ -141,12 +141,12 @@ export default function Projects() {
                       <div className="flex gap-2">
                        { project.live &&  
                           <Link href={project.live} target="_blank">
-                            <p className="bg-foreground/5 text-foreground/90 text-sm font-normal rounded-full flex items-center justify-center px-6 py-2">View</p>
+                            <p className="bg-foreground/10 hover:bg-foreground/20 transition-all duration-300 font-semibold text-sm md:text-base rounded-md flex items-center justify-center px-10 py-2">View</p>
                           </Link>
                         }
                         { project.code && 
                           <Link href={project.code} target="_blank">
-                            <p className="bg-foreground/5 text-foreground/90 text-sm font-normal rounded-full flex items-center justify-center px-6 py-2">Code</p>
+                            <p className="bg-foreground/10 hover:bg-foreground/20 transition-all duration-300 font-semibold text-sm md:text-base rounded-md flex items-center justify-center px-10 py-2">Code</p>
                           </Link> 
                         }
                         
