@@ -56,11 +56,14 @@ function HeroSection() {
             <div id="text" className="opacity-0 w-full h-full flex flex-col gap-8 rounded-md ">
               <video className="w-full lg:w-fit lg:max-h-[96vh] mx-auto rounded-md flex-shrink-0" 
                 src="/showcase.mp4" 
-                poster="/video-thumbnail.jpg"
+                poster="/video-thumbnail.png"
                 loop 
-                autoPlay 
+                onClick={(e) => {
+                  (e.target as HTMLVideoElement).play();
+                }}
                 onMouseEnter={(e) => {
                   (e.target as HTMLVideoElement).muted = false;
+                  console.log("video",e.target);
                 }} 
                 onMouseLeave={(e) => {
                   (e.target as HTMLVideoElement).muted = true;
