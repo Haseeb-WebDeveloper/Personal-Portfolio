@@ -30,19 +30,16 @@ function Navbar() {
                     <div id="logo" className=''>
                         <Link id="otherLinks" href="/" className='opacity-0 flex items-center gap-2'>
                             <Image src="/logo.svg" alt="logo" width={40} height={40} />
-                            {/* <span className='font-semibold text-2xl'>
-                                HaseeB
-                            </span> */}
                         </Link>
                     </div>
                     <div id="links" className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 hidden md:flex gap-3 text-md text-foreground'>
-                        <Link id="navbarLink"  href="#about" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/5 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
+                        <Link id="navbarLink"  href="#about" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/10 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
                             <span>About</span>
                         </Link>
-                        <Link id="navbarLink"  href="#work" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/5 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
+                        <Link id="navbarLink"  href="#work" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/10 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
                             <span>Work</span>
                         </Link>
-                        <Link id="navbarLink"  href="#Contact" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/5 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
+                        <Link id="navbarLink"  href="#Contact" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/10 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
                             <span>Contact</span>
                         </Link>
                     </div>

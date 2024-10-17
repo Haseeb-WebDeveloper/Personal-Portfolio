@@ -8,9 +8,9 @@ const projectData = [
       live: "https://ai-seo-tool.netlify.app/",
       code: "https://github.com/Haseeb-WebDeveloper/AI-SEO-SaaS-Landing-Page",
       media: {
-          large: "/ai-seo-laptop-mockup.png",
-          medium: "/ai-seo-laptop-mockup.png",
-          small: "/ai-seo-laptop-mockup.png",
+        large: "/ai-seo-laptop-mockup.webp",
+          // medium: "/ai-seo-laptop-mockup.webp",
+          // small: "/ai-seo-laptop-mockup.webp",
       }
     },
     {
@@ -22,9 +22,9 @@ const projectData = [
       live: "https://wasifalikhan.online/",
       code: "https://github.com/Haseeb-WebDeveloper/Portfolio-Website-For-Client",
       media: {
-          large: "/wasif-laptop-mockup.png",
-          medium: "/wasif-pad-mockup.png",
-          small: "/wasif-mobile-mockup.png",
+          large: "/wasif-laptop-mockup.webp",
+          // medium: "/wasif-pad-mockup.webp",
+          // small: "/wasif-mobile-mockup.webp",
       }
     },
     {
@@ -36,9 +36,9 @@ const projectData = [
       // live: "https://www.google.com",
       code: "https://github.com/Haseeb-WebDeveloper/Fuzzie-Production",
       media: {
-          large: "/fuzzie-laptop-mockup.png",
-          medium: "/fuzzie-laptop-mockup.png",
-          small: "/fuzzie-laptop-mockup.png",
+          large: "/fuzzie-laptop-mockup.webp",
+          // medium: "/fuzzie-laptop-mockup.webp",
+          // small: "/fuzzie-laptop-mockup.webp",
       }
     },
     {
@@ -50,9 +50,9 @@ const projectData = [
       live: "https://gamingmasterhub.online/",
       // code: "https://www.google.com",
       media: {
-          large: "/gaming-master-hub-laptop-mockup.png",
-          medium: "/gaming-master-hub-laptop-mockup.png",
-          small: "/gaming-master-hub-laptop-mockup.png",
+          large: "/gaming-master-hub-laptop-mockup.webp",
+          // medium: "/gaming-master-hub-laptop-mockup.webp",
+          // small: "/gaming-master-hub-laptop-mockup.webp",
       }
     },
     {
@@ -64,9 +64,9 @@ const projectData = [
       live: "https://mbportfolio.pro/",
       // code: "https://www.google.com",
       media: {
-          large: "/mitra-laptop-mockup.png",
-          medium: "/mitra-bani-laptop-mockup.png",
-          small: "/mitra-bani-laptop-mockup.png",
+          large: "/mitra-laptop-mockup.webp",
+          // medium: "/mitra-bani-laptop-mockup.webp",
+          // small: "/mitra-bani-laptop-mockup.webp",
       }
     },
   ];

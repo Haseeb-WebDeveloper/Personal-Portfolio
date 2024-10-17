@@ -14,16 +14,16 @@ function SocialMediaIcon() {
     return (
         <div className=''>
             <div className=' inline-flex gap-3 '>
-                <Link href={LinkedinIn} className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
+                <Link href={LinkedinIn} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
                     <FaLinkedinIn size={20} />
                 </Link>
-                <Link href={Github} className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
+                <Link href={Github} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
                     <FaGithub size={20} />
                 </Link>
-                <Link href={Upwork} className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
+                <Link href={Upwork} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
                     <SiUpwork size={20} />
                 </Link>
-                <Link href={Instagram} className='text-foreground  p-3 rounded-full bg-foreground/5 hover:bg-foreground/10 transition ease-linear '>
+                <Link href={Instagram} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
                     <BsInstagram size={20} />
                 </Link>
             </div>

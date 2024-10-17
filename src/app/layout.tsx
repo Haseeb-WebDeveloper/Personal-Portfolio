@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GeistSans } from 'geist/font/sans';
-// import { GeistMono } from 'geist/font/mono';
 
 export const metadata: Metadata = {
   title: "Haseeb Ahmed | Portfolio",
@@ -18,15 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-
-
   return (
     <html lang="en">
         <head>
             <meta name="description" content={metadata.description ?? ""} />
-            {/* <meta name="keywords" content={metadata.keywords ?? ""} /> */}
-            {/* <meta name="author" content={metadata.authors?.[0]?.name ?? ""} /> */}
-            {/* <meta name="viewport" content={metadata.viewport?.toString() ?? ""} /> */}
         </head>
         <body
           className={`${GeistSans.className}  antialiased`}

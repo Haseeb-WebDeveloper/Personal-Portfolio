@@ -9,8 +9,7 @@ const Tools = () => {
                 a combo of these:</h2>
             </div>
             <div className='w-full flex flex-col md:flex-row gap-4 items-start md:justify-center'>
-                {/* things I create */}
-                <div className='md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
+                <div className='md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/10'>
                     <div className='bg-chart-1 text-background font-medium rounded-t-md p-2'>
                         <h3 className='text-md text-center'>Things I Create</h3>
                     </div>
@@ -25,8 +24,7 @@ const Tools = () => {
                     </ul>
                 </div>
 
-                {/* for product in */}
-                <div className='mt-4 md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
+                <div className='mt-4 md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/10'>
                     <div className='bg-chart-2 text-background font-medium rounded-t-md p-2'>
                         <h3 className='text-md text-center'>For Product In</h3>
                     </div>
@@ -41,8 +39,7 @@ const Tools = () => {
                     </ul>
                 </div>
 
-                {/* tools i use */}
-                <div className='md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/5'>
+                <div className='md:w-[300px] w-full rounded-md border-[1px] border-tertiary/5 flex flex-col justify-between bg-foreground/10'>
                     <div className='bg-chart-3 text-background font-medium rounded-t-md p-2'>
                         <h3 className='text-md text-center'>Tools I Use</h3>
                     </div>

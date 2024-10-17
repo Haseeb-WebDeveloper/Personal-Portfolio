@@ -10,9 +10,6 @@ const About = () => {
         <div className='py-2 px-2 md:py-12 md:px-12 bg-primary/10 rounded-md md:rounded-xl'>
           <div className=' flex flex-col md:flex-row justify-between items-center gap-4 md:gap-12 '>
             <div className='md:w-[70%] w-full flex flex-col gap-2'>
-              {/* <div>
-              <h1 className='border rounded-full px-3 w-fit bg-foreground/5 text-foreground/80 hover:text-foreground/90 transition-all duration-300 py-1 inline-flex text-sm font-normal leading-normal tracking-wide shadow-sm'>Frontend Website Developer</h1>
-              </div> */}
               <div className='flex flex-col gap-4'>
                 <div>
                   <h1 className='md:hidden flex text-3xl md:text-3xl font-medium p-2 bg-primary/10   rounded-md  leading-none'>About</h1>
@@ -31,8 +28,7 @@ const About = () => {
               </div>
             </div>
             <div id="image" className='flex flex-col md:flex-row gap-2 '>
-              <Image src='/haseeb.jpeg' alt='Haseeb Ahmed' width={500} height={500} className=' object-cover max-h-[420px] opacity-80 md:max-h-[300px] object-top md:max-w-[250px] max-w-full rounded-md' />
-              {/* <Image src='/bg.jpeg' alt='Haseeb Ahmed' width={500} height={500} className='bg-green-500   rounded-md md:w-[300px] md:h-[300px]' /> */}
+              <Image src='/haseeb.webp' alt='Haseeb Ahmed' width={500} height={500} className=' object-cover max-h-[420px] opacity-90 md:opacity-100 md:max-h-[300px] object-top md:max-w-[250px] max-w-full rounded-md' />
             </div>
           </div>
         </div>

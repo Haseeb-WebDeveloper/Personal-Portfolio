@@ -19,7 +19,7 @@ const Home = () => {
         cy={1}
         cr={1}
         className={cn(
-          "[mask-image:linear-gradient(to_bottom_right,green,transparent,transparent)] opacity-40",
+          "[mask-image:linear-gradient(to_bottom_right,green,transparent,transparent)] md:opacity-40 opacity-60",
         )}
         />
         <Navbar />
