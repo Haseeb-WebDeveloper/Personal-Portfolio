@@ -27,11 +27,11 @@ function HeroSection() {
 
   return (
     <section className=" section">     
-      <div className="pt-16 md:pt-24 ">
+      <div className="pt-12 md:pt-24 ">
         <div className="flex flex-col gap-12 ">
           <div className='flex flex-col gap-8'>
             <h1 id="text" className="opacity-0 font-bold text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] text-center leading-none md:leading-[5rem] tracking-[-1px] max-w-[940px] mx-auto">
-              I make businesses become <span className="text-tertiary dark:text-primary">unmatchable</span>
+              I make businesses to become <span className="text-tertiary dark:text-primary">unmatchable</span>
             </h1>
             <div className=" flex flex-wrap gap-2 mx-auto  justify-center items-center">
               <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
