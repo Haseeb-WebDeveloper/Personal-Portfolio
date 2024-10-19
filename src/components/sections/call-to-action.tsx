@@ -15,10 +15,10 @@ function CallToAction() {
                         <div className="flex flex-col gap-8 ">
                             <div className="flex flex-col gap-6 ">
                                 <p className='hidden md:block text-center md:text-left text-[2rem] md:text-[3rem] font-medium  text-foreground/95 max-w-[700px] leading-tight tracking-[-1px] '><span className="text-foreground">Level Up Your Brand</span>  with Empathic Visuals?</p>
-                                <p className=' font-medium text-center md:text-left text-[2rem] md:text-[3rem] max-w-[700px] leading-tight tracking-[-1px] '>Now, let&apos;s make it happen! ✨</p>
+                                <p className=' font-medium text-center md:text-left text-[2rem] md:text-[3rem] max-w-[700px] leading-tight tracking-[-1px] '>It&apos;s time to make it happen! ✨</p>
                             </div>
                             <div className="flex justify-center md:justify-start">
-                                <UpDownButton text="Let's Talk" />
+                                <UpDownButton text="Let's Talk" link="https://www.upwork.com/freelancers/~01b8c927b6fa311757" />
                             </div>
                         </div>
                         <div className="md:w-[40%] w-full h-full flex justify-center items-end">

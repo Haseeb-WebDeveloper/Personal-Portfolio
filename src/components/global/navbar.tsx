@@ -44,7 +44,7 @@ function Navbar() {
                         </Link>
                     </div>
                     <div  id="otherLinks" className='opacity-0'>
-                        <UpDownButton text="Let's Talk" />
+                        <UpDownButton text="Let's Talk" link="https://www.upwork.com/freelancers/~01b8c927b6fa311757" />
                     </div>
                 </nav>
             </header>

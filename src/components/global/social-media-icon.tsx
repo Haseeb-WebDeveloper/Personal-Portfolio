@@ -5,7 +5,7 @@ import { SiUpwork } from 'react-icons/si'
 
 function SocialMediaIcon() {
 
-    const Upwork = "https://www.upwork.com/freelancers/wasifwordpresswebsitedeveloper"
+    const Upwork = "https://www.upwork.com/freelancers/~01b8c927b6fa311757"
     const Instagram = "https://www.instagram.com/haseeb.ahmed.raza.khan/"
     const Github = "https://github.com/Haseeb-WebDeveloper/"
     const LinkedinIn = "https://pk.linkedin.com/in/haseeb-ahmed-raza-khan"
