@@ -18,11 +18,6 @@ function HeroSection() {
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }
       )
-      gsap.fromTo(
-        "#side-mockup",
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1, ease: "power2.out", delay: 1 }
-      );
   }, []);
 
   return (
@@ -63,7 +58,6 @@ function HeroSection() {
                 }}
                 onMouseEnter={(e) => {
                   (e.target as HTMLVideoElement).muted = false;
-                  console.log("video",e.target);
                 }} 
                 onMouseLeave={(e) => {
                   (e.target as HTMLVideoElement).muted = true;

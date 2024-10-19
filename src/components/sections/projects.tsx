@@ -77,7 +77,7 @@ export default function Projects() {
                 <div className="flex flex-col md:flex-row justify-between gap-10 h-full  ">
                   <div className="flex flex-col md:gap-10 gap-6 justify-between ">
                     <div className="flex flex-col gap-2 md:gap-4">
-                      <h1 className="text-primary text-2xl md:text-3xl font-medium max-w-2xl leading-none">{project.title}</h1>
+                      <h4 className="text-primary text-2xl md:text-3xl font-medium max-w-2xl leading-none">{project.title}</h4>
                       <p className="text-md font-normal leading-tight text-foreground/90 text-[0.9rem] md:text-lg max-w-xl">
                       {project.description}
                       </p>

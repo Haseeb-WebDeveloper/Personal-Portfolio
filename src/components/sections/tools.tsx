@@ -17,7 +17,7 @@ const Tools = () => {
                         {
                             thingsICreate.map((tool) => (
                                 <li key={tool.id} className={`py-2 px-3 text-foreground/90 hover:text-foreground ${tool.id !== thingsICreate.length ? 'border-b-[1px] border-primary/5' : ''} `}>
-                                    <h4 className='text-xl '>{tool.name}</h4>
+                                    <h3 className='text-xl '>{tool.name}</h3>
                                 </li>
                             ))
                         }
@@ -32,7 +32,7 @@ const Tools = () => {
                         {
                             forProductIn.map((tool) => (
                                 <li key={tool.id} className={`py-2 px-3  ${tool.id !== forProductIn.length ? 'border-b-[1px] border-primary/5 text-foreground/90 hover:text-foreground' : 'text-foreground/70'} `}>
-                                <h4 className='text-xl '>{tool.name}</h4>
+                                <h3 className='text-xl '>{tool.name}</h3>
                                 </li>
                             ))
                         }
@@ -47,7 +47,7 @@ const Tools = () => {
                         {
                             toolsIUse.map((tool) => (
                                 <li key={tool.id} className={`py-2 px-3 text-foreground/90 hover:text-foreground ${tool.id !== toolsIUse.length ? 'border-b-[1px] border-primary/5' : ''} `}>
-                                    <h4 className='text-xl '>{tool.name}</h4>
+                                    <h3 className='text-xl '>{tool.name}</h3>
                                 </li>
                             ))
                         }
