@@ -5,14 +5,16 @@ import React, { useState } from 'react'
 type Props = {
     text: string
     link: string
+    ariaLabel?: string
     // size?: 'small' | 'medium' | 'large'
 }
 
-const UpDownButton = ({ text, link }: Props) => {
+const UpDownButton = ({ text, link, ariaLabel }: Props) => {
     const [isHover, setIsHover] = useState(false);
     return (
         <div id="lets-talk" className={` flex gap-2  text-foreground `}>
             <Link
+                aria-label={ariaLabel}
                 onMouseEnter={() => setIsHover(true)}
                 onMouseLeave={() => setIsHover(false)}
                 href={link}

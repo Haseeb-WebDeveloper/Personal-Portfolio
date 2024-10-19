@@ -7,11 +7,11 @@ import { GeistSans } from 'geist/font/sans';
 export const metadata: Metadata = {
   // Title configuration
   title: {
-    default: 'Haseeb Ahmed | Frontend Website Developer',
+    default: 'Haseeb Ahmed Frontend Developer | React, Next.js, WordPress',
     template: '%s | Haseeb Ahmed'
   },
   // Site description
-  description: "Haseeb Ahmed is a skilled Frontend Website Developer specializing in React, Next.js, and WordPress. Based in Pakistan, offering services globally.",
+  description: "Haseeb Ahmed is a frontend developer with two years of experience in HTML, CSS, JavaScript, React, and WordPress.",
   // Keywords for SEO
   keywords: ["Haseeb Ahmed", "Frontend Website Developer", "React Developer", "Next.js Developer", "WordPress Developer", "Website Developer in Pakistan", "Haseeb Ahmed Raza Khan", "Haseeb Ahamed Programmer"],
   // Author information

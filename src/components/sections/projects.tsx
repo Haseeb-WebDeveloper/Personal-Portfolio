@@ -65,7 +65,7 @@ export default function Projects() {
                   </div>
                   <div className="w-full md:w-[50%] ">
                     <div className="w-full h-full flex md:justify-end justify-center items-center">
-                      <Image src="/web-developer.webp" alt="" width={350} height={350} className="object-contain"/>
+                      <Image src="/web-developer.webp" alt="web developer illustration" width={350} height={350} className="object-contain"/>
                     </div>
                   </div>
                 </div>
@@ -105,12 +105,12 @@ export default function Projects() {
                       </div>
                       <div className="flex gap-2">
                        { project.live &&  
-                          <Link href={project.live} target="_blank">
+                          <Link href={project.live} target="_blank" aria-label={`View ${project.title} live`}>
                             <p className="bg-foreground/10 hover:bg-foreground/20 transition-all duration-300 font-semibold text-sm md:text-base rounded-md flex items-center justify-center px-10 py-2">View</p>
                           </Link>
                         }
                         { project.code && 
-                          <Link href={project.code} target="_blank">
+                          <Link href={project.code} target="_blank" aria-label={`View ${project.title} code`}>
                             <p className="bg-foreground/10 hover:bg-foreground/20 transition-all duration-300 font-semibold text-sm md:text-base rounded-md flex items-center justify-center px-10 py-2">Code</p>
                           </Link> 
                         }
@@ -121,7 +121,7 @@ export default function Projects() {
                     <div className=" md:w-1/2 h-full md:h-auto w-full">
                       <div className="flex justify-center items-center w-full h-full ">
                         {project.media.large && (
-                          <Image src={project.media.large} alt="" width={700} height={700}  className="object-contain rounded-sm h-full"/>
+                          <Image src={project.media.large} alt={`${project.title} mockup`} width={700} height={700}  className="object-contain rounded-sm h-full"/>
                          )}
                       </div>
                     </div>

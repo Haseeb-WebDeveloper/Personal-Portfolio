@@ -14,17 +14,17 @@ function SocialMediaIcon() {
     return (
         <div className=''>
             <div className=' inline-flex gap-3 '>
-                <Link href={LinkedinIn} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
-                    <FaLinkedinIn size={20} />
+                <Link href={LinkedinIn} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear ' aria-label="Haseeb Ahmed LinkedIn profile" rel="noopener noreferrer">
+                    <FaLinkedinIn size={20} aria-hidden="true" />
                 </Link>
-                <Link href={Github} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
-                    <FaGithub size={20} />
+                <Link href={Github} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear ' aria-label="Haseeb Ahmed GitHub profile" rel="noopener noreferrer">
+                    <FaGithub size={20} aria-hidden="true" />
                 </Link>
-                <Link href={Upwork} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
-                    <SiUpwork size={20} />
+                <Link href={Upwork} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear ' aria-label="Haseeb Ahmed Upwork profile" rel="noopener noreferrer">
+                    <SiUpwork size={20} aria-hidden="true" />
                 </Link>
-                <Link href={Instagram} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear '>
-                    <BsInstagram size={20} />
+                <Link href={Instagram} className='text-foreground  p-3 rounded-full bg-foreground/10 hover:bg-foreground/5 transition ease-linear ' aria-label="Haseeb Ahmed Instagram profile" rel="noopener noreferrer">
+                    <BsInstagram size={20} aria-hidden="true" />
                 </Link>
             </div>
         </div>
