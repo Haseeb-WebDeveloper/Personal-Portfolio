@@ -28,7 +28,7 @@ function Navbar() {
             <header className='section font-coolcon  w-full  '>
                 <nav className='relative flex justify-between items-center h-16 md:h-20 px-4'>
                     <div id="logo" className=''>
-                        <Link id="otherLinks logo" href="/" className='opacity-0 flex items-center gap-2'>
+                        <Link id="otherLinks" href="/" className='opacity-0 flex items-center gap-2'>
                             <Image src="/logo.svg" alt="Haseeb Ahmed web developer Logo" width={40} height={40} />
                         </Link>
                     </div>
@@ -43,7 +43,7 @@ function Navbar() {
                             <span>Contact</span>
                         </Link>
                     </div>
-                    <div  id="otherLinks call-to-action" className='opacity-0'>
+                    <div  id="otherLinks" className='opacity-0'>
                         <UpDownButton text="Let's Talk" link="https://www.upwork.com/freelancers/~01b8c927b6fa311757"
                             ariaLabel="Let's Talk with Haseeb Ahmed web developer"
                         />
