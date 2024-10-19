@@ -6,30 +6,32 @@ import CallToAction from '@/components/sections/call-to-action';
 import Projects from '@/components/sections/projects';
 import DotPattern from '@/components/ui/dot-pattern';
 import { cn } from "@/lib/utils";
+import StructuredData from '@/components/StructuredData';
 
 const Home = () => {
 
   return (
     <>
+      <StructuredData />
       <main className=''>
-      <DotPattern
-        width={20}
-        height={20}
-        cx={1}
-        cy={1}
-        cr={1}
-        className={cn(
-          "[mask-image:linear-gradient(to_bottom_right,green,transparent,transparent)] md:opacity-40 opacity-60",
-        )}
+        <DotPattern
+          width={20}
+          height={20}
+          cx={1}
+          cy={1}
+          cr={1}
+          className={cn(
+            "[mask-image:linear-gradient(to_bottom_right,green,transparent,transparent)] md:opacity-40 opacity-60",
+          )}
         />
         <Navbar />
         <HeroSection />
         <About />
         <Tools />
-        <Projects/>
+        <Projects />
         <CallToAction />
       </main>
-    
+
     </>
   );
 };
