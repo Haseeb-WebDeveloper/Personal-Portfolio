@@ -28,23 +28,23 @@ function HeroSection() {
             <h3 id="text" className="opacity-0 font-bold text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] text-center leading-none md:leading-[5rem] tracking-[-1px] max-w-[940px] mx-auto">
               I make businesses become <span className="text-tertiary dark:text-primary">unmatchable</span>
             </h3>
-            <div className=" flex flex-wrap gap-2 mx-auto  justify-center items-center">
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
+            <div className=" flex flex-wrap flex-col md:flex-row gap-2 mx-auto  justify-center items-center">
+              <div id='skill' className="order-1 md:order-1 md:w-auto opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/Designer.svg" alt="Designer svg logo" width={20} height={20} />
                 <h4>Designer</h4>
               </div>
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
-                <Image src="/Developer.svg" alt="Developer svg logo" width={20} height={20} />
-                <h4>Nextjs Developer</h4>
-              </div>
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
+              <div id='skill' className="order-2 md:order-3 md:w-auto opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/wordpress-logo.webp" alt="Wordpress logo" width={20} height={20} />
-                <h4>Wordpress</h4>
+                <h4 className='flex gap-1.5 items-center'>Wordpress <span className="md:hidden block">Developer</span></h4>
               </div>
-              <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
+              <div id='skill' className="order-3 md:order-2 w-full md:w-auto opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
+                <Image src="/Developer.svg" alt="Developer svg logo" width={20} height={20} />
+                <h4>React & Nextjs Developer</h4>
+              </div>
+              {/* <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/Shop.svg" alt="Shopify svg logo" width={20} height={20} />
                 <h4>Shopify</h4>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className=" flex flex-col md:flex-row justify-center items-end ">
