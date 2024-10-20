@@ -28,7 +28,7 @@ Visit my portfolio at: [https://www.haseebkhan.online/](https://www.haseebkhan.o
 ## 🚀 Getting Started
 
 1. Clone the repository:   ```
-   git clone https://github.com/yourusername/portfolio.git   ```
+   git clone https://github.com/Haseeb-WebDeveloper/Portfolio-3.0.0.git   ```
 
 2. Install dependencies:   ```
    bun install   ```
@@ -42,6 +42,7 @@ Visit my portfolio at: [https://www.haseebkhan.online/](https://www.haseebkhan.o
 
 - `src/app`: Main application pages
 - `src/components`: Reusable React components
+- `src/components/sections`: Contain all sections like Hero, About, project section etc.
 - `src/lib`: Utility functions and helpers
 - `public`: Static assets (images, fonts, etc.)
 

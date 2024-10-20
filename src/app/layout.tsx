@@ -79,7 +79,7 @@ export const metadata: Metadata = {
   },
   // Site verification for search engines
   verification: {
-    google: 'google-site-verification=dxahfz3XpK1-OcArNedfu5Lqq-GeLCes40jcVM-5ID4', // TODO: Add Google Search Console verification code
+    google: process.env.GOOGLE_SITE_VERIFICATION || '', // Use the environment variable
   },
 };
 
