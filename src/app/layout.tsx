@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GeistSans } from 'geist/font/sans';
+import Script from 'next/script';
 
 // Metadata configuration for SEO and site information
 export const metadata: Metadata = {
@@ -93,6 +94,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <Script 
+          src="https://api.cronbot.ai/v1/widgets/app/app_ms1c995bmr1f" 
+          strategy="afterInteractive"
+        />
       </head>
       <body className={GeistSans.className}>
         {/* ThemeProvider for dark/light mode */}
