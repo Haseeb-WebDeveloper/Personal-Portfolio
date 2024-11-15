@@ -49,7 +49,7 @@ function HeroSection() {
           </div>
           <div className=" flex flex-col md:flex-row justify-center items-end ">
             <div id="text" className="opacity-0 w-full h-full flex flex-col gap-8 rounded-md ">
-              <video className="w-full lg:w-fit lg:max-h-[96vh] mx-auto rounded-md flex-shrink-0" 
+              <video className="w-full lg:w-fit lg:max-h-[96vh] mx-auto rounded-md flex-shrink-0 cursor-pointer" 
                 src="/showcase.mp4" 
                 poster="/video-thumbnail.webp"
                 loop 

@@ -3,5 +3,6 @@ Allow: /
 Disallow: /private/
 Disallow: /admin/
 
+# Sitemap
 Sitemap: https://haseebkhan.online/sitemap.xml
 
