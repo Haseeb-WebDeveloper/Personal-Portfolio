@@ -88,29 +88,29 @@ const toolsIUse = [
 ]
 
 
-const skills = [
-    {
-        id: 1,
-        name: 'Designer',
-    },
-    {
-        id: 2,
-        name: 'Developer',
-    },
-    {
-        id: 3,
-        name: 'Nextjs',
-    },
-    {
-        id: 3,
-        name: 'Wordpress',
-    },
-    {
-        id: 4,
-        name: 'Shopify',
-    },
-]
+// const skills = [
+//     {
+//         id: 1,
+//         name: 'Designer',
+//     },
+//     {
+//         id: 2,
+//         name: 'Developer',
+//     },
+//     {
+//         id: 3,
+//         name: 'Nextjs',
+//     },
+//     {
+//         id: 3,
+//         name: 'Wordpress',
+//     },
+//     {
+//         id: 4,
+//         name: 'Shopify',
+//     },
+// ]
 
-export { thingsICreate, forProductIn, toolsIUse, skills }
+export { thingsICreate, forProductIn, toolsIUse }
 
 

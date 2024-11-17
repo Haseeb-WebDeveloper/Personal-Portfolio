@@ -93,7 +93,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/haseeb-logo.webp" sizes="any" />
         <Script 
           src="https://api.cronbot.ai/v1/widgets/app/app_ms1c995bmr1f" 
           strategy="afterInteractive"

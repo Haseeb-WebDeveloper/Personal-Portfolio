@@ -45,7 +45,7 @@ export default function Projects() {
 
   return (
     <>
-      <section className=""></section>
+      {/* <section className=""></section> */}
       <section id="mainContainer" className="h-full w-full ">
         <div className=""></div>
         <div id="work" className="section  horizontal-wrapper w-full h-[100vh] overflow-hidden">
