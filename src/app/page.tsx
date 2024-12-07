@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/hero';
 import Tools from '@/components/sections/tools';
 import CallToAction from '@/components/sections/call-to-action';
 import Projects from '@/components/sections/projects';
+import MoreProjects from '@/components/sections/more_projects';
 import DotPattern from '@/components/ui/dot-pattern';
 import { cn } from "@/lib/utils";
 import StructuredData from '@/components/StructuredData';
@@ -12,6 +13,7 @@ const Home = () => {
 
   return (
     <>
+    <div className='h-screen w-screen bg-primary'>test</div>
       <StructuredData />
       <main className=''>
         <DotPattern
@@ -29,6 +31,7 @@ const Home = () => {
         <About />
         <Tools />
         <Projects />
+        {/* <MoreProjects /> */}
         <CallToAction />
       </main>
 

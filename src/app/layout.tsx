@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     siteName: 'Haseeb Ahmed Portfolio',
     images: [
       {
-        url: 'haseeb.webp', // TODO: Create and add this image
+        url: 'haseeb.webp',
         width: 1200,
         height: 630,
       },
@@ -69,19 +69,19 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Haseeb Ahmed | Frontend Website Developer',
     description: 'Professional Frontend Developer specializing in React, Next.js, and WordPress',
-    // creator: '@HaseebAhmedRaza', // TODO: Add Twitter handle if available
-    images: ['haseeb.webp'], // TODO: Create and add this image
-  },
-  // Viewport settings for responsive design
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,  
+    images: ['haseeb.webp'],
   },
   // Site verification for search engines
   verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || '', // Use the environment variable
+    google: process.env.GOOGLE_SITE_VERIFICATION || '',
   },
+};
+
+// Separate viewport export
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 // Root layout component
@@ -100,7 +100,6 @@ export default function RootLayout({
         />
       </head>
       <body className={GeistSans.className}>
-        {/* ThemeProvider for dark/light mode */}
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

@@ -6,7 +6,7 @@ Welcome to my personal portfolio website! This project showcases my skills and p
 
 Visit my portfolio at: [https://www.haseebkhan.online/](https://www.haseebkhan.online/)
 
-## 🛠 Tech Stack
+## 🛠 Tech Stack:
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Runtime**: [Bun](https://bun.sh/)

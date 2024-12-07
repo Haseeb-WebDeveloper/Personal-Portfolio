@@ -22,7 +22,7 @@ function HeroSection() {
 
   return (
     <section className=" section">     
-      <div className="pt-12 md:pt-24 ">
+      <div className="pt-12 md:pt-24">
         <div className="flex flex-col gap-12 ">
           <div className='flex flex-col gap-8'>
             <h3 id="text" className="opacity-0 font-bold text-[3rem] md:text-[4.5rem] lg:text-[5.5rem] text-center leading-none md:leading-[5rem] tracking-[-1px] max-w-[940px] mx-auto">
