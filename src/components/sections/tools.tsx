@@ -8,8 +8,8 @@ const Tools = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3
+        staggerChildren: 0.3, // Increased delay for staggered children
+        delayChildren: 0.2 // Increased delay for the container
       }
     }
   }
@@ -23,7 +23,7 @@ const Tools = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.2, // Increased duration for card visibility
         ease: "easeOut"
       }
     }
@@ -38,7 +38,7 @@ const Tools = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.2, // Increased duration for list items
       }
     }
   }
@@ -52,7 +52,7 @@ const Tools = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.4, // Increased duration for header visibility
         ease: "easeOut"
       }
     }

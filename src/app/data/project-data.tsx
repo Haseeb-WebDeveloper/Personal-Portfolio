@@ -31,9 +31,9 @@ const projectData = [
     {
       title: "Sentriq AI",
       description: "This is a landing page I created for a SaaS company using AI to enhance SEO for businesses, featuring a clean design that showcases their innovative solutions.",
-      duration: "3 weeks",
-      category: "Software",
-      tools: ["Next.js", "Tailwind", "Ngrok", "Prisma", "Neon Tech", "Clerk", "Aceternity UI"],
+      duration: "1 week",
+      category: "Landing Page",
+      tools: ["Next.js", "Tailwind", "Aceternity UI", "Wordpress"],
       live: "https://sentriq-ai.netlify.app/",
       code: "https://github.com/Haseeb-WebDeveloper/Sentriq-website-for-cybersecurity-application",
       media: {
