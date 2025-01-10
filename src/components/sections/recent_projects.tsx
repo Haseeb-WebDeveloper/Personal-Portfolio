@@ -2,46 +2,11 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { recentProjects } from '@/app/data/project-data'
 
-// Define the project type
-type Project = {
-  id: number
-  title: string
-  description: string
-  image: string
-  tools: string[]
-  live?: string
-  code?: string
-}
 
-// Sample project data
-const recentProjects: Project[] = [
-  {
-    id: 1,
-    title: "E-commerce Dashboard",
-    description: "A modern dashboard for managing online store operations with real-time analytics and inventory management.",
-    image: "/ecommerce-dashboard.webp",
-    tools: ["React", "TypeScript", "Tailwind", "Redux"],
-    live: "https://dashboard-demo.com",
-    code: "https://github.com/username/dashboard"
-  },
-  {
-    id: 2,
-    title: "AI Chat Interface",
-    description: "A sleek chat interface powered by AI, featuring real-time responses and conversation history.",
-    image: "/ai-chat.webp",
-    tools: ["Next.js", "OpenAI", "Tailwind", "Firebase"],
-    live: "https://ai-chat-demo.com"
-  },
-  {
-    id: 3,
-    title: "Portfolio Generator",
-    description: "A tool that helps developers create professional portfolios with customizable templates.",
-    image: "/portfolio-gen.webp",
-    tools: ["React", "Node.js", "MongoDB", "Express"],
-    code: "https://github.com/username/portfolio-gen"
-  }
-]
+
+
 
 const MoreProjects = () => {
   const containerVariants = {
@@ -71,19 +36,16 @@ const MoreProjects = () => {
   }
 
   return (
-    <section className="section py-20">
+    <section className="section">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
-        className="flex flex-col gap-12"
+        className="flex flex-col gap-4 pt-24 pb-20"
       >
-        <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-medium mb-4">More Recent Work</h2>
-          <p className="text-foreground/70 max-w-2xl mx-auto">
-            Here are some other projects I've worked on recently. Each one presented unique challenges and opportunities for learning.
-          </p>
+        <div className="text-left">
+          <h2 className="text-3xl md:text-5xl font-medium">Recent <span className='text-primary'>Projects</span>✨</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -98,7 +60,7 @@ const MoreProjects = () => {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               

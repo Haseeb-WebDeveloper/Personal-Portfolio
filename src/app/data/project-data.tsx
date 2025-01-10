@@ -1,3 +1,4 @@
+
 const projectData = [
     {
       title: "AI SEO Landing Page",
@@ -28,22 +29,22 @@ const projectData = [
       }
     },
     {
-      title: "Fuzzie Automation",
-      description: "This is an automation tool I developed to streamline tasks across Google Drive, Slack, Notion, and Discord, making it easy to manage workflows.",
+      title: "Sentriq AI",
+      description: "This is a landing page I created for a SaaS company using AI to enhance SEO for businesses, featuring a clean design that showcases their innovative solutions.",
       duration: "3 weeks",
       category: "Software",
       tools: ["Next.js", "Tailwind", "Ngrok", "Prisma", "Neon Tech", "Clerk", "Aceternity UI"],
-      // live: "https://www.google.com",
-      code: "https://github.com/Haseeb-WebDeveloper/Fuzzie-Production",
+      live: "https://sentriq-ai.netlify.app/",
+      code: "https://github.com/Haseeb-WebDeveloper/Sentriq-website-for-cybersecurity-application",
       media: {
-          large: "/fuzzie-laptop-mockup.webp",
+          large: "/sentriq.png",
           // medium: "/fuzzie-laptop-mockup.webp",
           // small: "/fuzzie-laptop-mockup.webp",
       }
     },
     {
       title: "Gaming Master Hub",
-      description: "This is a gaming blog website I created, featuring an engaging design and easy navigation, tailored for sharing game reviews, news, and insights with a vibrant community of gamers.",
+      description: "This is a bloging website I created, featuring an engaging design and easy navigation, tailored for sharing game reviews, news, and insights with a vibrant community of gamers.",
       duration: "6 Days",
       category: "Blog Website",
       tools: ["Wordpress", "Elementor", "Figma"],
@@ -72,3 +73,73 @@ const projectData = [
   ];
   
   export default projectData;
+
+  export type Project = {
+    id: number
+    title: string
+    description: string
+    image: string
+    tools: string[]
+    live?: string
+    code?: string
+  }
+
+
+ export const recentProjects: Project[] = [
+    {
+      id: 1,
+      title: "AI Assignment Manager",
+      description: "A web-based software that helps students manage their assignments and submit them to their teachers. AI is used to grade assignments and provide feedback.",
+      image: "/ai-assignment-manager.jpeg",
+      tools: ["Nextjs", "TypeScript", "Tailwind", "Node", "Express", "MongoDB", "JWT"],
+      live: "https://ai-grading.netlify.app/",
+      code: "https://github.com/Haseeb-WebDeveloper/ai-assigement-checker-full-stack-application"
+    },
+    {
+      id: 2,
+      title: "Askify Q&A Platform",
+      description: "A platform for asking questions and receiving answers from the community, featuring a sleek chat interface powered by AI with real-time responses.",
+      image: "/askify.jpeg",
+      tools: ["Next.js", "TypeScript", "Tailwind", "shadcn", "Node", "Express", "MongoDB", "Supabase"],
+      // live: "https://askify-q-a-platform.netlify.app/",
+      code: "https://github.com/Haseeb-WebDeveloper/ask"
+    },
+    {
+      id: 3,
+      title: "Fuzzie Automation",
+      description: "An automation web-based software developed to streamline tasks across Google Drive, Slack, Notion, and Discord, simplifying workflow management.",
+      image: "/fuzzie.jpeg",
+      tools: ["Next.js", "TypeScript", "Tailwind", "shadcn", "Node", "Express", "MongoDB", "Clerk"],
+      code: "https://github.com/Haseeb-WebDeveloper/Fuzzie-Production"
+    }
+  ]
+
+
+  export const toolProjects: Project[] = [
+    {
+      id: 1,
+      title: "Gitignore File Generator",
+      description: "A tool that helps developers generate gitignore files for their project. It support 570+ languages and frameworks.",
+      image: "/gitignore-generator.jpeg",
+      tools: ["Nextjs", "TypeScript", "Tailwind", "shadcn", "Node", "Express"],
+      live: "https://gitignore-generator.netlify.app/",
+      code: "https://github.com/Haseeb-WebDeveloper/gitignore-generator"
+    },
+    {
+      id: 2,
+      title: "Json Data Formatter",
+      description: "A tool that format JSON data, featuring syntax validation, tree view visualization, copy to clipboard, file download, and custom indentation.",
+      image: "/json-formatter.jpeg",
+      tools: ["Next.js", "TypeScript", "Tailwind", "shadcn", "Node", "Express"],
+      live: "https://jsonformatteronline.site/"
+    },
+    {
+      id: 3,
+      title: "URL Shortener",
+      description: "A tool that helps developers shorten long URLs into shorter ones, making them easier to share and manage.",
+      image: "/url-shortener.jpeg",
+      tools: ["Next.js", "TypeScript", "Tailwind", "shadcn", "Node", "Express"],
+      code: "https://github.com/Haseeb-WebDeveloper/Next.js-url-shortener-website",
+      live: "https://shortener.haseebkhan.online/"
+    }
+  ]
