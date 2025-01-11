@@ -3,7 +3,7 @@ import admin from "@/database/models/admin.model";
 import { comparePassword, generateJWT, setCookie } from "@/utils/jwt";
 import connectDB from "@/database/connect";
 
-export const POST = async (req: NextRequest, res: NextResponse) => {
+export const POST = async (req: NextRequest) => {
   const { email, password } = await req.json();
   if (!email || !password) {
     return NextResponse.json({ message: "Email and password are required" }, { status: 400 });

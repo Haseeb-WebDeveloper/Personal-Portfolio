@@ -3,7 +3,7 @@ import admin from "@/database/models/admin.model";
 import { hashPassword } from "@/utils/jwt";
 import connectDB from "@/database/connect";
 
-export const POST = async (req: NextRequest, res: NextResponse) => {
+export const POST = async (req: NextRequest) => {
   const { name, email, password } = await req.json();
   
   if (!name || !email || !password) {

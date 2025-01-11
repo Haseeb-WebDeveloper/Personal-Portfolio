@@ -1,12 +1,15 @@
-'use client'
-import { useEffect } from 'react'
-import { useRouter, useParams } from 'next/navigation'
+import { Metadata } from 'next'
 import PostEditor from '../page'
 
-export default function EditPost() {
-  const router = useRouter()
-  const params = useParams()
-  const id = params.id as string
+export const metadata: Metadata = {
+  title: 'Edit Post - Admin Dashboard',
+  description: 'Edit your blog post'
+}
 
-  return <PostEditor postId={id} />
+interface Props {
+  params: { id: string }
+}
+
+export default function EditPost({ params }: Props) {
+  return <PostEditor postId={params.id} />
 } 

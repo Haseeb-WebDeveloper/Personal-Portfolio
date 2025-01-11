@@ -4,6 +4,8 @@
     "no-console": "off",
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "react/no-unknown-property": "off",
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

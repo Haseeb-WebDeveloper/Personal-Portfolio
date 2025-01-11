@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { BarChart3, Users, FileText, Settings, LogOut, Edit, Eye, Trash2 } from 'lucide-react'
+import { BarChart3, FileText, Settings, LogOut, Edit, Eye, Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { IBlogPost } from '@/database/models/blog-post.model'

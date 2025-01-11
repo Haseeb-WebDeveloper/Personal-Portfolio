@@ -20,7 +20,7 @@ const projectData = [
       duration: "1 weeks",
       category: "Portfolio",
       tools: ["React.js", "Tailwind", "Framer Motion", "GSAP", "Aceternity UI", "Figma"],
-      live: "https://wasifalikhan.online/",
+      live: "https://wasif-khan.netlify.app/",
       code: "https://github.com/Haseeb-WebDeveloper/Portfolio-Website-For-Client",
       media: {
           large: "/wasif-laptop-mockup.webp",

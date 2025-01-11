@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { IBlogPost } from '@/database/models/blog-post.model'
 import { formatDate } from '@/lib/utils'
 import { Badge } from "@/components/ui/badge"
-import { Calendar, Clock } from 'lucide-react'
+import { Calendar } from 'lucide-react'
 
 interface BlogCardProps {
   post: IBlogPost
@@ -54,10 +54,6 @@ export default function BlogCard({ post }: BlogCardProps) {
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               <span>{formatDate(post.createdAt!)}</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              <span>{post.readingTime} min read</span>
             </div>
           </div>
         </div>

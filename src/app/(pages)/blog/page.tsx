@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { IBlogPost } from '@/database/models/blog-post.model'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
@@ -36,10 +36,9 @@ export default function BlogPage() {
     }
   }
 
-  const filterPosts = () => {
+  const filterPosts = useCallback(() => {
     let filtered = [...posts]
 
-    // Filter by search term
     if (searchTerm) {
       filtered = filtered.filter(post => 
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -47,7 +46,6 @@ export default function BlogPage() {
       )
     }
 
-    // Filter by category
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(post => 
         post.categories?.includes(selectedCategory)
@@ -55,7 +53,7 @@ export default function BlogPage() {
     }
 
     setFilteredPosts(filtered)
-  }
+  }, [posts, searchTerm, selectedCategory])
 
   return (
     <main className="min-h-screen bg-background">

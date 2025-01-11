@@ -7,7 +7,7 @@ import { IBlogPost } from '@/database/models/blog-post.model'
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 import { formatDate } from '@/lib/utils'
-import { ArrowLeft, Calendar, Clock, Share2, User } from 'lucide-react'
+import { ArrowLeft, Calendar, Share2, User } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function BlogPostPage() {
@@ -18,7 +18,7 @@ export default function BlogPostPage() {
 
   useEffect(() => {
     fetchPost()
-  }, [])
+  }, [params.slug])
 
   const fetchPost = async () => {
     try {

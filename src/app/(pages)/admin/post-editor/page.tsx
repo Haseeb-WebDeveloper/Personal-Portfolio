@@ -1,5 +1,5 @@
 'use client'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
 import { useRouter } from 'next/navigation'
 import { uploadToCloudinary } from '@/lib/cloudinary'
@@ -63,7 +63,12 @@ interface PostFormData {
   ogImage: string
 }
 
-interface PostEditorProps {
+interface Props {
+  params?: { id?: string }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+interface PostEditorProps extends Props {
   postId?: string
 }
 
@@ -148,13 +153,9 @@ export default function PostEditor({ postId }: PostEditorProps) {
     }
   }
 
-  useEffect(() => {
-    if (postId) {
-      fetchPost()
-    }
-  }, [postId])
+  const fetchPost = useCallback(async () => {
+    if (!postId) return
 
-  const fetchPost = async () => {
     try {
       setLoading(true)
       const res = await fetch(`/api/blog/${postId}`)
@@ -167,15 +168,15 @@ export default function PostEditor({ postId }: PostEditorProps) {
         title: post.title,
         content: post.content,
         slug: post.slug,
-        categories: post.categories,
-        tags: post.tags,
+        categories: post.categories || [],
+        tags: post.tags || [],
         isPublished: post.isPublished,
         isFeatured: post.isFeatured,
         language: post.language,
         priority: post.priority,
         metaTitle: post.metaTitle,
         metaDescription: post.metaDescription,
-        metaKeywords: post.metaKeywords,
+        metaKeywords: post.metaKeywords || [],
         ogTitle: post.ogTitle,
         ogDescription: post.ogDescription,
         ogImage: post.ogImage,
@@ -192,7 +193,13 @@ export default function PostEditor({ postId }: PostEditorProps) {
     } finally {
       setLoading(false)
     }
-  }
+  }, [postId])
+
+  useEffect(() => {
+    if (postId) {
+      fetchPost()
+    }
+  }, [postId, fetchPost])
 
   const handleSubmit = async () => {
     if (!formData.title || !editorRef.current) {
@@ -215,6 +222,7 @@ export default function PostEditor({ postId }: PostEditorProps) {
         ogDescription: formData.ogDescription || content.slice(0, 160),
       }
 
+      // Progress simulation
       const interval = setInterval(() => {
         setProgress(prev => Math.min(prev + 10, 90))
       }, 200)
@@ -431,7 +439,6 @@ export default function PostEditor({ postId }: PostEditorProps) {
                     onChange={e => setFormData(prev => ({ ...prev, slug: e.target.value }))}
                   />
                 </div>
-
 
                 <div className="flex items-center gap-4">
                   <label className="flex items-center gap-2">
