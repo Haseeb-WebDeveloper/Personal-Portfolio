@@ -14,12 +14,12 @@ export default function BlogCard({ post }: BlogCardProps) {
     <Link href={`/blog/${post.slug}`}>
       <article className="group relative bg-foreground/5 rounded-lg overflow-hidden border border-foreground/10 transition-all duration-300 hover:border-primary/50 hover:shadow-lg">
         {/* Featured Image */}
-        <div className="relative aspect-[16/9] overflow-hidden">
+        <div className="relative aspect-video overflow-hidden">
           <Image
             src={post.featuredImage || '/placeholder-blog.jpg'}
             alt={post.title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
           />
           {post.isFeatured && (
             <Badge className="absolute top-4 left-4">
