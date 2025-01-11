@@ -1,6 +1,7 @@
 import mongoose, { Schema, model, models } from "mongoose";
 
 export interface IBlogPost {
+    _id?: string;
     title: string; 
     content: string; 
     author: string;

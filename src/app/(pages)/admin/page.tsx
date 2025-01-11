@@ -1,125 +1,104 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { BarChart3, Users, FileText, Settings, LogOut } from 'lucide-react'
+import { BarChart3, Users, FileText, Settings, LogOut, Edit, Eye, Trash2 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { IBlogPost } from '@/database/models/blog-post.model'
+import { formatDate } from '@/lib/utils'
 
-interface DashboardCard {
-  title: string
-  value: number
-  icon: React.ReactNode
-  color: string
+interface DashboardStats {
+  totalPosts: number
+  publishedPosts: number
+  draftPosts: number
 }
 
 export default function AdminDashboard() {
   const router = useRouter()
   const [loading, setLoading] = useState(true)
-  const [stats, setStats] = useState({
+  const [posts, setPosts] = useState<IBlogPost[]>([])
+  const [stats, setStats] = useState<DashboardStats>({
     totalPosts: 0,
-    totalUsers: 0,
-    totalViews: 0,
-    totalComments: 0,
+    publishedPosts: 0,
+    draftPosts: 0,
   })
 
   useEffect(() => {
-    // Check if user is authenticated
-    const token = localStorage.getItem('adminToken')
-    if (!token) {
-      router.push('/admin/auth/login')
-      return
+    fetchPosts()
+  }, [])
+
+  const fetchPosts = async () => {
+    try {
+      const res = await fetch('/api/blog')
+      const data = await res.json()
+      
+      if (!res.ok) throw new Error(data.message)
+      
+      setPosts(data.posts)
+      
+      // Calculate stats
+      const publishedPosts = data.posts.filter((post: IBlogPost) => post.isPublished).length
+      setStats({
+        totalPosts: data.posts.length,
+        publishedPosts,
+        draftPosts: data.posts.length - publishedPosts,
+      })
+    } catch (error) {
+      console.error('Error fetching posts:', error)
+    } finally {
+      setLoading(false)
     }
-
-    // Fetch dashboard stats
-    const fetchStats = async () => {
-      try {
-        setStats({
-          totalPosts: 12,
-          totalUsers: 150,
-          totalViews: 1500,
-          totalComments: 45,
-        })
-      } catch (error) {
-        console.error('Error fetching stats:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchStats()
-  }, [router])
-
-  const dashboardCards: DashboardCard[] = [
-    {
-      title: 'Total Posts',
-      value: stats.totalPosts,
-      icon: <FileText className="w-6 h-6" />,
-      color: 'bg-blue-500',
-    },
-    {
-      title: 'Total Users',
-      value: stats.totalUsers,
-      icon: <Users className="w-6 h-6" />,
-      color: 'bg-green-500',
-    },
-    {
-      title: 'Total Views',
-      value: stats.totalViews,
-      icon: <BarChart3 className="w-6 h-6" />,
-      color: 'bg-purple-500',
-    },
-  ]
-
-  const handleLogout = () => {
-    localStorage.removeItem('adminToken')
-    router.push('/admin/auth/login')
   }
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-primary"></div>
-      </div>
-    )
+  const handleDelete = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this post?')) return
+
+    try {
+      const res = await fetch(`/api/blog/${id}`, {
+        method: 'DELETE',
+      })
+
+      if (!res.ok) throw new Error('Failed to delete post')
+      
+      fetchPosts() // Refresh posts after deletion
+    } catch (error) {
+      console.error('Error deleting post:', error)
+    }
   }
 
   return (
     <div className="min-h-screen bg-background">
       {/* Sidebar */}
-      <div className="fixed left-0 top-0 h-full w-64 bg-foreground/10 border-r border-foreground/10">
-        <div className="p-6">
-          <h2 className="text-2xl font-bold text-primary">Admin Panel</h2>
-        </div>
-        <nav className="mt-6">
-          <Link
-            href="/admin/dashboard"
-            className="flex items-center px-6 py-3 text-foreground hover:bg-foreground/5"
-          >
-            <BarChart3 className="w-5 h-5 mr-3" />
-            Dashboard
-          </Link>
-          <Link
-            href="/admin/posts"
-            className="flex items-center px-6 py-3 text-foreground hover:bg-foreground/5"
-          >
-            <FileText className="w-5 h-5 mr-3" />
-            Posts
-          </Link>
-          <Link
-            href="/admin/settings"
-            className="flex items-center px-6 py-3 text-foreground hover:bg-foreground/5"
-          >
-            <Settings className="w-5 h-5 mr-3" />
-            Settings
-          </Link>
+      <div className="fixed left-0 top-0 bottom-0 w-64 bg-foreground/10 border-r border-foreground/10 p-4">
+        <div className="flex flex-col h-full">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold">Dashboard</h2>
+            <nav className="space-y-2">
+              <Link href="/admin" className="flex items-center gap-2 p-2 rounded-md bg-primary/10 text-primary">
+                <BarChart3 className="w-5 h-5" />
+                Overview
+              </Link>
+              <Link href="/admin/posts" className="flex items-center gap-2 p-2 rounded-md hover:bg-foreground/10">
+                <FileText className="w-5 h-5" />
+                Posts
+              </Link>
+              <Link href="/admin/settings" className="flex items-center gap-2 p-2 rounded-md hover:bg-foreground/10">
+                <Settings className="w-5 h-5" />
+                Settings
+              </Link>
+            </nav>
+          </div>
           <button
-            onClick={handleLogout}
-            className="w-full flex items-center px-6 py-3 text-foreground hover:bg-foreground/5"
+            onClick={() => {
+              localStorage.removeItem('adminToken')
+              router.push('/admin/auth/login')
+            }}
+            className="mt-auto flex items-center gap-2 p-2 rounded-md hover:bg-foreground/10 text-red-500"
           >
-            <LogOut className="w-5 h-5 mr-3" />
+            <LogOut className="w-5 h-5" />
             Logout
           </button>
-        </nav>
+        </div>
       </div>
 
       {/* Main content */}
@@ -135,49 +114,73 @@ export default function AdminDashboard() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {dashboardCards.map((card, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-lg bg-foreground/10 border border-foreground/10"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm text-foreground/70">{card.title}</p>
-                  <p className="text-2xl font-bold mt-1">{card.value}</p>
-                </div>
-                <div className={`p-3 rounded-full ${card.color}/10`}>
-                  {card.icon}
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="p-6 rounded-lg bg-foreground/10 border border-foreground/10">
+            <h3 className="text-lg font-semibold">Total Posts</h3>
+            <p className="text-3xl font-bold mt-2">{stats.totalPosts}</p>
+          </div>
+          <div className="p-6 rounded-lg bg-foreground/10 border border-foreground/10">
+            <h3 className="text-lg font-semibold">Published Posts</h3>
+            <p className="text-3xl font-bold mt-2">{stats.publishedPosts}</p>
+          </div>
+          <div className="p-6 rounded-lg bg-foreground/10 border border-foreground/10">
+            <h3 className="text-lg font-semibold">Draft Posts</h3>
+            <p className="text-3xl font-bold mt-2">{stats.draftPosts}</p>
+          </div>
         </div>
 
-        {/* Recent Activity */}
+        {/* Recent Posts */}
         <div className="bg-foreground/10 rounded-lg border border-foreground/10 p-6">
-          <h2 className="text-xl font-semibold mb-4">Recent Activity</h2>
-          <div className="space-y-4">
-            {[1, 2, 3].map((_, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-between py-3 border-b border-foreground/10 last:border-0"
-              >
-                <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                    <FileText className="w-5 h-5 text-primary" />
+          <h2 className="text-xl font-semibold mb-4">Recent Posts</h2>
+          {loading ? (
+            <div className="text-center py-4">Loading...</div>
+          ) : posts.length === 0 ? (
+            <div className="text-center py-4">No posts found</div>
+          ) : (
+            <div className="space-y-4">
+              {posts.map((post) => (
+                <div
+                  key={post._id}
+                  className="flex items-center justify-between py-3 border-b border-foreground/10 last:border-0"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="flex-1">
+                      <h3 className="font-medium">{post.title}</h3>
+                      <div className="flex items-center gap-2 text-sm text-foreground/70">
+                        <span>{formatDate(post.createdAt || new Date())}</span>
+                        <span>•</span>
+                        <span className={`px-2 py-0.5 rounded-full text-xs ${
+                          post.isPublished ? 'bg-green-500/10 text-green-500' : 'bg-yellow-500/10 text-yellow-500'
+                        }`}>
+                          {post.isPublished ? 'Published' : 'Draft'}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="ml-4">
-                    <p className="text-sm font-medium">New post published</p>
-                    <p className="text-xs text-foreground/70">2 hours ago</p>
+                  <div className="flex items-center gap-2">
+                    <Link href={`/blog/${post.slug}`} target="_blank">
+                      <Button size="sm" variant="ghost">
+                        <Eye className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                    <Link href={`/admin/post-editor/${post._id}`}>
+                      <Button size="sm" variant="ghost">
+                        <Edit className="w-4 h-4" />
+                      </Button>
+                    </Link>
+                    <Button 
+                      size="sm" 
+                      variant="ghost"
+                      className="text-red-500 hover:text-red-600"
+                      onClick={() => handleDelete(post._id || '')}
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </Button>
                   </div>
                 </div>
-                <button className="text-sm text-primary hover:text-primary/80">
-                  View
-                </button>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>

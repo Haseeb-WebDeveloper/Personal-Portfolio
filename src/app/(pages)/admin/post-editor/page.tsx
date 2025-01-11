@@ -63,7 +63,11 @@ interface PostFormData {
   ogImage: string
 }
 
-export default function PostEditor() {
+interface PostEditorProps {
+  postId?: string
+}
+
+export default function PostEditor({ postId }: PostEditorProps) {
   const router = useRouter()
   const editorRef = useRef<any>(null)
   const [loading, setLoading] = useState(false)
@@ -144,40 +148,82 @@ export default function PostEditor() {
     }
   }
 
-  // Handle form submission
+  useEffect(() => {
+    if (postId) {
+      fetchPost()
+    }
+  }, [postId])
+
+  const fetchPost = async () => {
+    try {
+      setLoading(true)
+      const res = await fetch(`/api/blog/${postId}`)
+      const data = await res.json()
+
+      if (!res.ok) throw new Error(data.error)
+
+      const post = data.post
+      setFormData({
+        title: post.title,
+        content: post.content,
+        slug: post.slug,
+        categories: post.categories,
+        tags: post.tags,
+        isPublished: post.isPublished,
+        isFeatured: post.isFeatured,
+        language: post.language,
+        priority: post.priority,
+        metaTitle: post.metaTitle,
+        metaDescription: post.metaDescription,
+        metaKeywords: post.metaKeywords,
+        ogTitle: post.ogTitle,
+        ogDescription: post.ogDescription,
+        ogImage: post.ogImage,
+      })
+      setFeaturedImage(post.featuredImage || '')
+      
+      // Set editor content when it's ready
+      if (editorRef.current) {
+        editorRef.current.setContent(post.content)
+      }
+    } catch (error) {
+      console.error('Error fetching post:', error)
+      alert('Failed to fetch post')
+    } finally {
+      setLoading(false)
+    }
+  }
+
   const handleSubmit = async () => {
-    console.log("Submit button clicked");
     if (!formData.title || !editorRef.current) {
-      alert('Title and content are required');
-      return;
+      alert('Title and content are required')
+      return
     }
 
     setLoading(true)
     setProgress(0)
 
     try {
-      // Get content from TinyMCE
       const content = editorRef.current.getContent()
-      
-      // Prepare data
       const finalData = {
         ...formData,
         content,
         featuredImage,
-        // Set meta title and description if not provided
         metaTitle: formData.metaTitle || formData.title,
         metaDescription: formData.metaDescription || content.slice(0, 160),
         ogTitle: formData.ogTitle || formData.title,
         ogDescription: formData.ogDescription || content.slice(0, 160),
       }
 
-      // Progress simulation
       const interval = setInterval(() => {
         setProgress(prev => Math.min(prev + 10, 90))
       }, 200)
 
-      const res = await fetch('/api/blog/create', {
-        method: 'POST',
+      const url = postId ? `/api/blog/${postId}` : '/api/blog/create'
+      const method = postId ? 'PUT' : 'POST'
+
+      const res = await fetch(url, {
+        method,
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(finalData)
       })
@@ -185,21 +231,18 @@ export default function PostEditor() {
       const data = await res.json()
 
       if (!res.ok) {
-        throw new Error(data.error || 'Failed to create post')
+        throw new Error(data.error || 'Failed to save post')
       }
 
       setProgress(100)
       clearInterval(interval)
       
-      // Show success message
-      alert('Post created successfully!')
-      
-      // Redirect to admin dashboard
+      alert(postId ? 'Post updated successfully!' : 'Post created successfully!')
       router.push('/admin')
 
     } catch (error: any) {
-      console.error('Error creating post:', error)
-      alert(error.message || 'Failed to create post')
+      console.error('Error saving post:', error)
+      alert(error.message || 'Failed to save post')
     } finally {
       setLoading(false)
       setProgress(0)
@@ -220,7 +263,9 @@ export default function PostEditor() {
             <Link href="/admin" className="hover:text-primary">
               <ArrowLeft className="w-6 h-6" />
             </Link>
-            <h1 className="text-2xl font-bold">Create New Post</h1>
+            <h1 className="text-2xl font-bold">
+              {postId ? 'Edit Post' : 'Create New Post'}
+            </h1>
           </div>
           <div className="flex items-center gap-4">
             <Button

@@ -218,3 +218,50 @@ html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Prose Styles */
+.prose {
+  @apply text-foreground;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  @apply text-foreground font-bold mb-4;
+}
+
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose a {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+.prose img {
+  @apply rounded-lg my-8;
+}
+
+.prose code {
+  @apply bg-foreground/10 rounded px-1 py-0.5;
+}
+
+.prose pre {
+  @apply bg-foreground/10 rounded-lg p-4 my-6 overflow-x-auto;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-primary pl-4 italic my-6;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-6 pl-6;
+}
+
+.prose li {
+  @apply mb-2;
+}
