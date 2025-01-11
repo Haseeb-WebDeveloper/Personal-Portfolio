@@ -36,8 +36,8 @@ function Navbar() {
                         <Link id="navbarLink"  href="#about" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/10 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
                             <span>About</span>
                         </Link>
-                        <Link id="navbarLink"  href="#work" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/10 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
-                            <span>Work</span>
+                        <Link id="navbarLink"  href="/blog" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/25 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/20 transition-all duration-200'>
+                            <span>Blog</span>
                         </Link>
                         <Link id="navbarLink"  href="#Contact" className='opacity-0 px-4 py-1.5 font-medium rounded-[24px] flex justify-center items-center border bg-foreground/10 text-sm hover:border-primary-foreground/10 hover:dark:bg-foreground/10 transition-all duration-200'>
                             <span>Contact</span>

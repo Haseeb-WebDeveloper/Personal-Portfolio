@@ -1,14 +1,11 @@
 export const CATEGORIES = [
-  'Web Development',
-  'Programming',
-  'JavaScript',
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node.js',
-  'Database',
-  'DevOps',
-  'Tools',
-  'Career',
-  'Tutorial'
+    'Programming',
+    'Business',
+    'AI',
+    'Marketing',
+    'Industry',
+    'Entertainment',
+    'Tools',
+    'Career',
+    'Tutorial'
 ] 

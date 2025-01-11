@@ -16,15 +16,16 @@ export interface IBlogPost {
     priority: number;
     isFeatured: boolean;
     // SEO Fields
-    metaTitle: string;
-    metaDescription: string;
-    metaKeywords: string[];
+    metaTitle?: string;
+    metaDescription?: string;
+    metaKeywords?: string[];
     // Open Graph
-    ogTitle: string;
-    ogDescription: string;
-    ogImage: string;
+    ogTitle?: string;
+    ogDescription?: string;
+    ogImage?: string;
     // Additional SEO
     structuredData?: string;
+    __v?: number;
 }
 
 const BlogPostSchema: Schema<IBlogPost> = new mongoose.Schema(
@@ -38,6 +39,8 @@ const BlogPostSchema: Schema<IBlogPost> = new mongoose.Schema(
         isPublished: { type: Boolean, default: false },
         slug: { type: String, required: true, unique: true },
         isFeatured: { type: Boolean, default: false },
+        language: { type: String, default: "en" },
+        priority: { type: Number, default: 0 },
         // SEO Fields
         metaTitle: { type: String, default: "" },
         metaDescription: { type: String, default: "" },
@@ -48,8 +51,6 @@ const BlogPostSchema: Schema<IBlogPost> = new mongoose.Schema(
         ogImage: { type: String, default: null },
         // Additional SEO
         structuredData: { type: String },
-        language: { type: String, default: "en" },
-        priority: { type: Number, default: 0 },
     },
     { 
         timestamps: true,
