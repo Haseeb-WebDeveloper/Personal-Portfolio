@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { BarChart3, Users, FileText, Settings, LogOut } from 'lucide-react'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 interface DashboardCard {
   title: string
@@ -124,7 +125,12 @@ export default function AdminDashboard() {
       {/* Main content */}
       <div className="ml-64 p-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
+          <div className="flex items-center justify-between">
+            <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
+            <Button>
+              <Link href="/admin/post-editor">Create Post</Link>
+            </Button>
+          </div>
           <p className="text-foreground/70 mt-2">Welcome to your admin dashboard</p>
         </div>
 
