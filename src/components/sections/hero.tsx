@@ -39,7 +39,7 @@ function HeroSection() {
               </div>
               <div id='skill' className="order-3 md:order-2 w-full md:w-auto opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/Developer.svg" alt="Developer svg logo" width={20} height={20} />
-                <h4>React & Nextjs Developer</h4>
+                <h4>Nextjs Full Stack Developer</h4>
               </div>
               {/* <div id="skill" className="opacity-0 flex gap-2 items-center text-foreground/90 text-md md:text-lg font-normal rounded-full bg-secondary/70 px-4 py-1.5 hover:bg-secondary transition-all duration-100 cursor-default">
                 <Image src="/Shop.svg" alt="Shopify svg logo" width={20} height={20} />

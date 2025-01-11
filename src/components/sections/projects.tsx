@@ -4,7 +4,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { useEffect } from "react"; 
 import Image from "next/image";
 import Link from "next/link";
-import projectData from "@/app/data/project-data";
+import projectData from "@/constant/project-data";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import { recentProjects } from '@/app/data/project-data'
+import { recentProjects } from '@/constant/project-data'
 
 
 

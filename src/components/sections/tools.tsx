@@ -1,5 +1,5 @@
 'use client'
-import { forProductIn, thingsICreate, toolsIUse } from '@/app/data/tools-data'
+import { forProductIn, thingsICreate, toolsIUse } from '@/constant/tools-data'
 import { motion } from 'framer-motion'
 
 const Tools = () => {
