@@ -35,7 +35,7 @@ export default function BlogPostContent({ post }: { post: IBlogPost }) {
 
   return (
     <article className="min-h-screen bg-background">
-      <div className="max-w-3xl mx-auto px-4 py-10 flex flex-col gap-4">
+      <div className="max-w-3xl mx-auto px-4 py-10 flex flex-col gap-4 overflow-hidden text-wrap break-words prose prose-lg dark:prose-invert">
         {/* Navigation */}
         <div className="flex justify-between items-center">
           <Link href="/blog">

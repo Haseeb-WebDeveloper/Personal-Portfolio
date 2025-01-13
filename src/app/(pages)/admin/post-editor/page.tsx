@@ -368,7 +368,7 @@ export default function PostEditor({ postId }: PostEditorProps) {
                   'bold italic forecolor | alignleft aligncenter ' +
                   'alignright alignjustify | bullist numlist outdent indent | ' +
                   'removeformat | image | help',
-                content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+                content_style: 'body { font-family: "Poppins",Arial,sans-serif; font-size:14px }',
                 images_upload_handler: handleEditorImageUpload,
                 automatic_uploads: true,
                 file_picker_types: 'image',
@@ -486,12 +486,13 @@ export default function PostEditor({ postId }: PostEditorProps) {
                       <input
                         type="number"
                         min="0"
-                        max="10"
+                        max="1"
+                        step="0.1"
                         className="w-full p-2 rounded-md border bg-background"
                         value={formData.priority}
                         onChange={e => setFormData(prev => ({ 
                           ...prev, 
-                          priority: parseInt(e.target.value) 
+                          priority: parseFloat(e.target.value) 
                         }))}
                       />
                     </div>

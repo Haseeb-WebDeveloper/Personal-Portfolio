@@ -1,15 +1,37 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { verifyJWT } from './utils/jwt';
 
 // List of allowed origins
 const allowedOrigins = [
   'http://localhost:3000',
   'https://haseebkhan.online',
   'https://www.haseebkhan.online'
-  // Add more domains as needed
 ]
 
+// protect admin routes
+const protectedRoutes = ['/admin']
+
 export function middleware(request: NextRequest) {
+  // check if the route is protected
+  if (protectedRoutes.some(route => request.nextUrl.pathname.startsWith(route))) {
+    console.log('protected route');
+    const token = request.cookies.get('token')?.value;
+    if (!token) {
+      return NextResponse.redirect(new URL('/admin/auth/login', request.url));
+    }
+    let decodedToken;
+    try {
+      decodedToken = verifyJWT(token);
+    } catch (error) {
+      return NextResponse.redirect(new URL('/admin/auth/login', request.url));
+    }
+    if ((decodedToken as any).role !== 'admin') {
+      return NextResponse.redirect(new URL('/admin/auth/login', request.url));
+    }
+    return NextResponse.next();
+  }
+
   // Get the origin from the request headers
   const origin = request.headers.get('origin')
   
@@ -27,7 +49,6 @@ export function middleware(request: NextRequest) {
       if (allowedOrigins.includes(origin)) {
         headers.set('Access-Control-Allow-Origin', origin)
       } else {
-        // For development, you might want to allow all origins
         headers.set('Access-Control-Allow-Origin', '*')
       }
     }

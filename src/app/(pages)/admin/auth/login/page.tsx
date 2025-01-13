@@ -4,23 +4,16 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 export default function LoginPage() {
+  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError('')
-
-    // Basic validation
-    if (!email || !password) {
-      setError('Please fill in all fields')
-      setLoading(false)
-      return
-    }
 
     try {
       const res = await fetch('/api/admin/auth/login', {
@@ -29,21 +22,19 @@ export default function LoginPage() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, password }),
+        credentials: 'include',
       })
 
       const data = await res.json()
 
-      if (!res.ok) {
-        throw new Error(data.message || 'Invalid credentials')
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Login failed')
       }
 
-      // Store the token in localStorage or cookies if needed
-      if (data.token) {
-        localStorage.setItem('adminToken', data.token)
-      }
+      // Redirect to admin dashboard
+      router.push('/admin')
+      router.refresh()
 
-      // Redirect to admin dashboard on success
-      router.push('/admin/dashboard')
     } catch (err: any) {
       setError(err.message)
     } finally {
