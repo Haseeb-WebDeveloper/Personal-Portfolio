@@ -9,3 +9,9 @@ export const CATEGORIES = [
     'Career',
     'Tutorial'
 ] 
+
+export const LANGUAGES = [
+    { code: 'en', name: 'English' },
+    { code: 'ur', name: 'Urdu' },
+    { code: 'hi', name: 'Hindi' }
+  ]

@@ -23,27 +23,7 @@ import {
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-const CATEGORIES = [
-  'Web Development',
-  'Programming',
-  'JavaScript',
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node.js',
-  'Database',
-  'DevOps',
-  'Tools',
-  'Career',
-  'Tutorial'
-]
-
-const LANGUAGES = [
-  { code: 'en', name: 'English' },
-  { code: 'ur', name: 'Urdu' },
-  { code: 'hi', name: 'Hindi' }
-]
+import { CATEGORIES, LANGUAGES } from '@/constant/blog-data'
 
 interface PostFormData {
   title: string
@@ -359,15 +339,26 @@ export default function PostEditor({ postId }: PostEditorProps) {
               init={{
                 height: 500,
                 menubar: true,
+                codesample_languages: [
+                  { text: 'HTML/XML', value: 'markup' },
+                  { text: 'JavaScript', value: 'javascript' },
+                  { text: 'CSS', value: 'css' },
+                  { text: 'JSON', value: 'json' },
+                  { text: 'Python', value: 'python' },
+                  { text: 'Ruby', value: 'ruby' },
+                  { text: 'Java', value: 'java' },
+                  { text: 'C', value: 'c' },
+                ],
                 plugins: [
                     'advlist', 'autolink', 'lists', 'link', 'image', 'charmap', 'preview',
                     'anchor', 'searchreplace', 'visualblocks', 'code', 'fullscreen',
-                    'insertdatetime', 'media', 'table', 'help', 'wordcount'
+                    'insertdatetime', 'media', 'table', 'help', 'wordcount', 'codesample', 'code', 'autosave', 'accordion',
+                    'searchreplace', 
                   ],
                   toolbar: 'undo redo | blocks | ' +
                   'bold italic forecolor | alignleft aligncenter ' +
                   'alignright alignjustify | bullist numlist outdent indent | ' +
-                  'removeformat | image | help',
+                  'codesample | removeformat | image | help | code | restoredraft | accordion',
                 content_style: 'body { font-family: "Poppins",Arial,sans-serif; font-size:14px }',
                 images_upload_handler: handleEditorImageUpload,
                 automatic_uploads: true,

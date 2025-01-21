@@ -4,7 +4,7 @@ import connectDB from '@/database/connect'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   await connectDB()
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'
+  const baseUrl = 'https://haseebkhan.online'
   
   // Get all published blog posts
   const posts = await BlogPostModel.find({ isPublished: true })
@@ -26,10 +26,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: `${baseUrl}/blog`,
+      url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 0.9,
+      priority: 0.8,
+    },
+    {
+      url: `https://shortener.haseebkhan.online/`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
+    {
+      url: `https://jsonformatteronline.site/`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
     },
     ...blogUrls,
   ]

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin/', '/api/'],
     },
-    sitemap: 'https://yourdomain.com/sitemap.xml',
+    sitemap: 'https://haseebkhan.online/sitemap.xml',
   }
 } 
