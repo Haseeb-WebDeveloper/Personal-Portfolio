@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { GeistSans } from 'geist/font/sans';
-import Script from 'next/script';
+
 
 // Metadata configuration for SEO and site information
 export const metadata: Metadata = {
   // Title configuration
   title: {
-    default: 'Haseeb Ahmed Frontend Developer | React, Next.js, WordPress',
+    default: 'Haseeb Ahmed Full Stack Developer | Love Building SaaS Products and Web Apps',
     template: '%s | Haseeb Ahmed'
   },
   // Site description
-  description: "Haseeb Ahmed is a frontend developer with two years of experience in HTML, CSS, JavaScript, React, and WordPress.",
+  description: "I am Haseeb Ahmed, a Full Stack Developer from Pakistan. I love building SaaS products and Web Apps",
   // Keywords for SEO
-  keywords: ["Haseeb Ahmed", "Frontend Website Developer", "React Developer", "Next.js Developer", "WordPress Developer", "Website Developer in Pakistan", "Haseeb Ahmed Raza Khan", "Haseeb Ahamed Programmer"],
+  keywords: ["Haseeb Ahmed", "Full Stack Developer", "React Developer", "Next.js Developer", "WordPress Developer", "Website Developer in Pakistan", "Haseeb Ahmed Raza Khan", "Haseeb Ahamed Programmer", "Haseeb Ahmed Raza Khan", "Haseeb Ahmed Web Developer", "Haseeb Ahmed Web Developer in Pakistan", "SaaS Products", "Web Apps", "how is haseeb ahmed"],
   // Author information
-  authors: [{ name: "Haseeb Ahmed", url: "https://haseebkhan.online" }],
-  creator: "Haseeb Ahmed",
-  publisher: "Haseeb Ahmed",
+  authors: [{ name: "Haseeb Ahmed Raza Khan", url: "https://haseebkhan.online" }],
+  creator: "Haseeb Ahmed Raza Khan",
+  publisher: "Haseeb Ahmed Raza Khan",
   // Disable automatic detection of contact information
   formatDetection: {
     email: false,
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
   },
   // Open Graph metadata for social media sharing
   openGraph: {
-    title: 'Haseeb Ahmed Raza Khan | Frontend Developer',
-    description: 'Professional Frontend Developer specializing in React, Next.js, and WordPress',
+    title: 'Haseeb Ahmed Raza Khan | Full Stack Developer',
+    description: 'I am Haseeb Ahmed, a Full Stack Developer from Pakistan. I love building SaaS products and Web Apps',
     url: 'https://haseebkhan.online',
     siteName: 'Haseeb Ahmed Portfolio',
     images: [
@@ -67,9 +67,10 @@ export const metadata: Metadata = {
   // Twitter card metadata
   twitter: {
     card: 'summary_large_image',
-    title: 'Haseeb Ahmed | Frontend Website Developer',
-    description: 'Professional Frontend Developer specializing in React, Next.js, and WordPress',
+    title: 'Haseeb Ahmed | Full Stack Developer',
+    description: 'I am Haseeb Ahmed, a Full Stack Developer from Pakistan. I love building SaaS products and Web Apps',
     images: ['haseeb.webp'],
+
   },
   // Site verification for search engines
   verification: {
@@ -92,13 +93,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/haseeb-logo.webp" sizes="any" />
-        <Script 
-          src="https://api.cronbot.ai/v1/widgets/app/app_ms1c995bmr1f" 
-          strategy="afterInteractive"
-        />
-      </head>
       <body className={GeistSans.className}>
         <ThemeProvider
           attribute="class"

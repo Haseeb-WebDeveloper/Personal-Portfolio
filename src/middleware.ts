@@ -75,5 +75,7 @@ export function middleware(request: NextRequest) {
 
 // Configure which routes the middleware should run on
 export const config = {
-  matcher: '/api/:path*',
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+  ],
 } 
