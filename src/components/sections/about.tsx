@@ -13,13 +13,14 @@ const About = () => {
               <div className='flex flex-col gap-4'>
                 <div>
                   <h2 className='md:hidden flex text-2xl md:text-3xl font-medium p-2 bg-primary/10   rounded-md  leading-none'>About</h2>
-                  <h3 id="text" className="p-1.5 md:p-0 text-[20px] md:text-[30px] leading-[1.3] tracking-tight text-foreground/90">
-                    Haseeb Ahmed, from Pakistan, a <span className='text-tertiary dark:text-white'>Full Stack Website Developer</span> with a passion for creating digital experiences that set businesses apart. With expertise in <span className='text-tertiary dark:text-white'>HTML, CSS, JavaScript, React, Next.js, Tailwind, GSAP, and WordPress</span>, I’ve helped <span className='text-tertiary dark:text-white'>8 businesses</span> rise above the competition. <span>So let me know your thoughts, and I will make it happen.</span>
+                  <h3 id="text" className="p-1.5 md:p-0 text-[20px] md:text-[27px] leading-[1.4] tracking-normal text-foreground">
+                  Hey! I'm Haseeb Ahmed, a <span className='text-tertiary dark:text-white'>Full Stack Website Developer</span> from Pakistan who loves building websites that make businesses stand out. I work with <span className='text-tertiary dark:text-white'>React, Next.js, TypeScript, Node.js, and WordPress </span>to create fast, user-friendly sites that actually solve problems. I've helped over <span className='text-tertiary dark:text-white'>20 businesses</span>  businesses level up their online presence, and I'm always excited to take on new challenges. <span>Got a project in mind? Let's make it happen! </span>
+                  {/* Hey! I'm Haseeb Ahmed, a Full Stack Developer from Pakistan who loves building websites that make businesses stand out. I work with React, Next.js, TypeScript, Node.js, and WordPress to create fast, user-friendly sites that actually solve problems. I've helped over 20 businesses level up their online presence, and I'm always excited to take on new challenges. Got a project in mind? Let's make it happen! */}
                   </h3>
                 </div>
                 <div className='flex justify-start gap-4'>
                   <div className='hidden md:flex '>
-                    <UpDownButton text="Let's Talk" link="https://www.upwork.com/freelancers/~01b8c927b6fa311757"
+                    <UpDownButton text="Let's Talk" link='mailto:web.dev.haseeb@gmail.com'
                       ariaLabel="Let's Talk with Haseeb Ahmed web developer"
                     />
                   </div>

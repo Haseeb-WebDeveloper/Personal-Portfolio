@@ -16,7 +16,7 @@ function CallToAction() {
                                 <h3 className=' font-medium text-center md:text-left text-[2rem] md:text-[3rem] max-w-[700px] leading-tight tracking-[-1px] '>It&apos;s time to make it happen! ✨</h3>
                             </div>
                             <div className="flex justify-center md:justify-start">
-                                <UpDownButton text="Let's Talk" link="https://www.upwork.com/freelancers/~01b8c927b6fa311757"
+                                <UpDownButton text="Let's Talk" link="mailto:web.dev.haseeb@gmail.com"
                                     ariaLabel="Let's Talk with Haseeb Ahmed web developer"
                                 />
                             </div>

@@ -9,7 +9,7 @@ const StructuredData = () => {
     "description": "Full Stack Developer specializing in Next.js. I love building SaaS products and Web Apps",
     "url": "https://haseebkhan.online",
     "sameAs": [
-      "https://www.upwork.com/freelancers/~01b8c927b6fa311757",
+      // "https://www.upwork.com/freelancers/~01b8c927b6fa311757",
       "https://www.instagram.com/haseeb.ahmed.raza.khan/",
       "https://pk.linkedin.com/in/haseeb-ahmed-raza-khan",
       "https://github.com/Haseeb-WebDeveloper/"

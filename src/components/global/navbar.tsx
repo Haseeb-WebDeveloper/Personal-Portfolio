@@ -75,7 +75,7 @@ function Navbar() {
                     <div id="otherLinks" className='opacity-0 hidden md:block'>
                         <UpDownButton 
                             text="Let's Talk" 
-                            link="https://www.upwork.com/freelancers/~01b8c927b6fa311757"
+                            link="mailto:web.dev.haseeb@gmail.com"
                             ariaLabel="Let's Talk with Haseeb Ahmed web developer"
                         />
                     </div>
@@ -140,7 +140,7 @@ function Navbar() {
                             <div className="mt-auto">
                                 <UpDownButton 
                                     text="Let's Talk" 
-                                    link="https://www.upwork.com/freelancers/~01b8c927b6fa311757"
+                                    link="mailto:web.dev.haseeb@gmail.com"
                                     ariaLabel="Let's Talk with Haseeb Ahmed web developer"
                                 />
                             </div>
